@@ -27,7 +27,7 @@ public class ApplicationLauncher {
 		
 		System.out.println("Locale: "+Locale.getDefault());
 		
-		MainGUI a=new MainGUI();
+		EzErregistratuGUI a=new EzErregistratuGUI();
 		a.setVisible(true);
 
 
