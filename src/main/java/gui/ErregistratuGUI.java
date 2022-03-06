@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
@@ -12,21 +13,26 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
+import domain.Admin;
+import domain.User;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
 
 public class ErregistratuGUI extends JFrame{
 	private JPanel contentPane;
-	private JPasswordField passwordField;
-	private JTextField textField;
+	private JPasswordField pass2;
+	private JTextField username;
 	
 	 private static BLFacade appFacadeInterface;
-	 private JTextField textField_1;
-	 private JTextField textField_2;
-	 private JPasswordField passwordField_1;
-	 private JTextField textField_3;
-	 private JTextField textField_4;
-	 private JTextField textField_5;
+	 private JTextField name;
+	 private JTextField email;
+	 private JPasswordField pass1;
+	 private JTextField day;
+	 private JTextField month;
+	 private JTextField year;
+	 private final ButtonGroup buttonGroup = new ButtonGroup();
 		
 		public static BLFacade getBusinessLogic(){
 			return appFacadeInterface;
@@ -71,30 +77,70 @@ public class ErregistratuGUI extends JFrame{
 		lblNewLabel_1.setBounds(22, 110, 67, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(136, 134, 138, 20);
-		contentPane.add(passwordField);
+		pass2 = new JPasswordField();
+		pass2.setBounds(136, 134, 138, 20);
+		contentPane.add(pass2);
 		
-		textField = new JTextField();
-		textField.setBounds(115, 49, 162, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		username = new JTextField();
+		username.setBounds(115, 49, 162, 20);
+		contentPane.add(username);
+		username.setColumns(10);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("User");
-		rdbtnNewRadioButton.setBounds(204, 235, 103, 23);
-		contentPane.add(rdbtnNewRadioButton);
+		JRadioButton user = new JRadioButton("User");
+		buttonGroup.add(user);
+		user.setBounds(204, 235, 103, 23);
+		contentPane.add(user);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Admin");
-		rdbtnNewRadioButton_1.setBounds(57, 235, 103, 23);
-		contentPane.add(rdbtnNewRadioButton_1);
+		JRadioButton admin = new JRadioButton("Admin");
+		buttonGroup.add(admin);
+		admin.setBounds(57, 235, 103, 23);
+		contentPane.add(admin);
 		
-		JButton btnNewButton = new JButton("Register");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton register = new JButton("Register");
+		register.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String izen = name.getText();
+				String userna = username.getText();
+				String emaila = email.getText();
+				String pasahitz1 = String.valueOf(pass1.getPassword());
+				String pasahitz2 = String.valueOf(pass2.getPassword());
+				String egun = day.getText();
+				String hila = month.getText();
+				String urte = year.getText();
+				BLFacade facade = MainGUI.getBusinessLogic();
+				if(user.isSelected()) {
+				if(pasahitz1.equals(pasahitz2)) {
+					User u = new User(izen, userna, emaila, pasahitz1, egun, hila, urte);
+					if(facade.registerUser(u)) {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(register, "Erregistratu egin zara");
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(register, "Erabiltzaile hori existitzen da");
+					}
+				}else {
+					JOptionPane jop = new JOptionPane();
+					jop.showMessageDialog(register, "Pasahitzak desberdinak dira");
+				}
+			}	else if(admin.isSelected()) {
+				if(pasahitz1.equals(pasahitz2)) {
+					Admin a = new Admin(izen, userna, emaila, pasahitz1, egun, hila, urte);
+					if(facade.registerAdmin(a)) {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(register, "Erregistratu egin zara");
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(register, "Administratzaile hori existitzen da");
+					}
+				}else {
+					JOptionPane jop = new JOptionPane();
+					jop.showMessageDialog(register, "Pasahitzak desberdinak dira");
+				}
+			}
 			}
 		});
-		btnNewButton.setBounds(344, 249, 89, 23);
-		contentPane.add(btnNewButton);
+		register.setBounds(344, 249, 89, 23);
+		contentPane.add(register);
 		
 		JLabel lblNewLabel_2 = new JLabel("Repeat Password:");
 		lblNewLabel_2.setBounds(22, 136, 132, 16);
@@ -108,19 +154,19 @@ public class ErregistratuGUI extends JFrame{
 		lblNewLabel_4.setBounds(22, 24, 61, 16);
 		contentPane.add(lblNewLabel_4);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(115, 17, 162, 20);
-		contentPane.add(textField_1);
+		name = new JTextField();
+		name.setColumns(10);
+		name.setBounds(115, 17, 162, 20);
+		contentPane.add(name);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(115, 80, 162, 20);
-		contentPane.add(textField_2);
+		email = new JTextField();
+		email.setColumns(10);
+		email.setBounds(115, 80, 162, 20);
+		contentPane.add(email);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(115, 107, 162, 20);
-		contentPane.add(passwordField_1);
+		pass1 = new JPasswordField();
+		pass1.setBounds(115, 107, 162, 20);
+		contentPane.add(pass1);
 		
 		JLabel lblNewLabel_5 = new JLabel("BirthDay:");
 		lblNewLabel_5.setBounds(22, 164, 61, 16);
@@ -138,20 +184,20 @@ public class ErregistratuGUI extends JFrame{
 		lblNewLabel_6_2.setBounds(245, 194, 61, 16);
 		contentPane.add(lblNewLabel_6_2);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(57, 189, 67, 24);
-		contentPane.add(textField_3);
+		day = new JTextField();
+		day.setColumns(10);
+		day.setBounds(57, 189, 67, 24);
+		contentPane.add(day);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(173, 189, 67, 24);
-		contentPane.add(textField_4);
+		month = new JTextField();
+		month.setColumns(10);
+		month.setBounds(173, 189, 67, 24);
+		contentPane.add(month);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(280, 188, 67, 24);
-		contentPane.add(textField_5);
+		year = new JTextField();
+		year.setColumns(10);
+		year.setBounds(280, 188, 67, 24);
+		contentPane.add(year);
 	}
 }
 

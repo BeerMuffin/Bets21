@@ -10,6 +10,8 @@ import javax.jws.WebService;
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.Question;
+import domain.User;
+import domain.Admin;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -78,6 +80,22 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 		return qry;
    };
+   
+   public boolean registerUser(User u) {
+	   dbManager.open(false);
+	   boolean reg;
+	   reg = dbManager.registerUser(u);
+	   dbManager.close();
+	   return reg;
+   }
+   
+   public boolean registerAdmin(Admin a) {
+	   dbManager.open(false);
+	   boolean reg;
+	   reg = dbManager.registerAdmin(a);
+	   dbManager.close();
+	   return reg;
+   }
 	
 	/**
 	 * This method invokes the data access to retrieve the events of a given date 

@@ -17,8 +17,10 @@ import javax.persistence.TypedQuery;
 
 import configuration.ConfigXML;
 import configuration.UtilDate;
+import domain.Admin;
 import domain.Event;
 import domain.Question;
+import domain.User;
 import exceptions.QuestionAlreadyExist;
 
 /**
@@ -262,4 +264,25 @@ public boolean existQuestion(Event event, String question) {
 		System.out.println("DataBase closed");
 	}
 	
+	public boolean registerUser(User u) {
+		if(db.find(User.class, u.getUsername()) == null) {
+			db.getTransaction().begin();
+			db.persist(u);
+			db.getTransaction().commit();
+			System.out.println("Erabiltzailea erregistratu da");
+			return true;
+		}else
+			return false;
+	}
+	
+	public boolean registerAdmin(Admin a) {
+		if(db.find(Admin.class, a.getUsername()) == null) {
+			db.getTransaction().begin();
+			db.persist(a);
+			db.getTransaction().commit();
+			System.out.println("Administratzailea erregistratu da");
+			return true;
+		}else
+			return false;
+	}
 }

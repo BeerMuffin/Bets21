@@ -54,7 +54,7 @@ public class EzErregistratuGUI extends JFrame {
 	
 
 		initialize();
-		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	
@@ -175,15 +175,15 @@ public class EzErregistratuGUI extends JFrame {
 	private void redibujar() {
 		jLabelSelectOption.setText(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
 		jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
-		btnNewButton.setText(ResourceBundle.getBundle("Etiquetas").getString("Login")); 
-		btnNewButton_1.setText(ResourceBundle.getBundle("Etiquetas").getString("Register")); 
+		btnNewButton.setText(ResourceBundle.getBundle("Etiquetas").getString("Register")); 
+		btnNewButton_1.setText(ResourceBundle.getBundle("Etiquetas").getString("Login")); 
 
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
 	
 	private JButton getBtnNewButton() {
 		if (btnNewButton == null) {
-			btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Login")); 
+			btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Register")); 
 			btnNewButton.setBounds(247, 134, 247, 67);
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -197,7 +197,7 @@ public class EzErregistratuGUI extends JFrame {
 	}
 	private JButton getBtnNewButton_1() {
 		if (btnNewButton_1 == null) {
-			btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Register")); 
+			btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Login")); 
 			btnNewButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JFrame a = new LoginGUI();
