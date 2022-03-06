@@ -114,6 +114,8 @@ public class ErregistratuGUI extends JFrame{
 					if(facade.registerUser(u)) {
 						JOptionPane jop = new JOptionPane();
 						jop.showMessageDialog(register, "Erregistratu egin zara");
+						JFrame a = new LoginGUI();
+						a.setVisible(true);
 					}else {
 						JOptionPane jop = new JOptionPane();
 						jop.showMessageDialog(register, "Erabiltzaile hori existitzen da");
@@ -128,6 +130,8 @@ public class ErregistratuGUI extends JFrame{
 					if(facade.registerAdmin(a)) {
 						JOptionPane jop = new JOptionPane();
 						jop.showMessageDialog(register, "Erregistratu egin zara");
+						JFrame b = new LoginGUI();
+						b.setVisible(true);
 					}else {
 						JOptionPane jop = new JOptionPane();
 						jop.showMessageDialog(register, "Administratzaile hori existitzen da");

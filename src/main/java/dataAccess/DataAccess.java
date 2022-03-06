@@ -285,4 +285,12 @@ public boolean existQuestion(Event event, String question) {
 		}else
 			return false;
 	}
+	
+	public User getUserByUsername(String username) {
+		return db.find(User.class, username);
+	}
+	
+	public Admin getAdminByUsername(String username) {
+		return db.find(Admin.class, username);
+	}
 }

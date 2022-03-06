@@ -64,4 +64,8 @@ public interface BLFacade  {
 	
 	@WebMethod boolean registerAdmin(Admin a);
 	
+	@WebMethod User getUserByUsername(String username);
+	
+	@WebMethod Admin getAdminByUsername(String username);
+	
 }

@@ -8,19 +8,26 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-
+import businessLogic.BLFacade;
+import domain.Admin;
+import domain.User;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+import javax.swing.ButtonGroup;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class LoginGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JPasswordField passwordField;
-	private JTextField textField;
+	private JPasswordField pass;
+	private JTextField username;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
 	
 	/**
@@ -58,34 +65,72 @@ public class LoginGUI extends JFrame {
 		lblNewLabel_1.setBounds(48, 95, 67, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(115, 92, 162, 20);
-		contentPane.add(passwordField);
+		pass = new JPasswordField();
+		pass.setBounds(115, 92, 162, 20);
+		contentPane.add(pass);
 		
-		textField = new JTextField();
-		textField.setBounds(115, 49, 162, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		username = new JTextField();
+		username.setBounds(115, 49, 162, 20);
+		contentPane.add(username);
+		username.setColumns(10);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("User");
-		rdbtnNewRadioButton.setBounds(115, 131, 67, 23);
-		contentPane.add(rdbtnNewRadioButton);
+		JRadioButton user = new JRadioButton("User");
+		buttonGroup.add(user);
+		user.setBounds(115, 131, 67, 23);
+		contentPane.add(user);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Admin");
-		rdbtnNewRadioButton_1.setBounds(210, 131, 67, 23);
-		contentPane.add(rdbtnNewRadioButton_1);
+		JRadioButton admin = new JRadioButton("Admin");
+		buttonGroup.add(admin);
+		admin.setBounds(210, 131, 67, 23);
+		contentPane.add(admin);
 		
-		JButton btnNewButton = new JButton("Login");
-		btnNewButton.setBounds(150, 164, 89, 23);
-		contentPane.add(btnNewButton);
+		JButton login = new JButton("Login");
+		login.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String erabiltzaile = username.getText();
+				String pasahitz = String.valueOf(pass.getPassword());
+				BLFacade facade = MainGUI.getBusinessLogic();
+				if(user.isSelected()) {
+					User u = facade.getUserByUsername(erabiltzaile);
+					if(u != null) {
+						if(pasahitz.equals(u.getPassword())){
+							JFrame a = new UserGUI();
+							a.setVisible(true);
+						}else {
+							JOptionPane jop = new JOptionPane();
+							jop.showMessageDialog(login, "Pasahitza ez da hori");
+						}
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(login, "Erabiltzaile hori ez da existitzen");
+					}
+				}
+				else if(admin.isSelected()) {
+					Admin a = facade.getAdminByUsername(erabiltzaile);
+					if(a != null) {
+						if(pasahitz.equals(a.getPassword())) {
+							JFrame b = new AdminGUI();
+							b.setVisible(true);
+						}else {
+							JOptionPane jop = new JOptionPane();
+							jop.showMessageDialog(login, "Pasahitza ez da hori");
+						}
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(login, "Administratzaile hori ez da existitzen");
+					}
+				}
+			}
+		});
+		login.setBounds(150, 164, 89, 23);
+		contentPane.add(login);
 		
 		JLabel lblNewLabel_2 = new JLabel("New Account?");
 		lblNewLabel_2.setBounds(10, 215, 75, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		JButton btnNewButton_1 = new JButton("Register");
-		btnNewButton_1.setBounds(10, 227, 89, 23);
-		contentPane.add(btnNewButton_1);
+		JButton register = new JButton("Register");
+		register.setBounds(10, 227, 89, 23);
+		contentPane.add(register);
 	}
 }
-

@@ -96,6 +96,20 @@ public class BLFacadeImplementation  implements BLFacade {
 	   dbManager.close();
 	   return reg;
    }
+   
+   public User getUserByUsername(String username) {
+	   dbManager.open(false);
+	   User u = dbManager.getUserByUsername(username);
+	   dbManager.close();
+	   return u;
+   }
+   
+   public Admin getAdminByUsername(String username) {
+	   dbManager.open(false);
+	   Admin a = dbManager.getAdminByUsername(username);
+	   dbManager.close();
+	   return a;
+   }
 	
 	/**
 	 * This method invokes the data access to retrieve the events of a given date 
