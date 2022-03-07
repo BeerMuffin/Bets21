@@ -58,10 +58,10 @@ public class LoginGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("User"));
-		lblNewLabel.setBounds(48, 52, 67, 14);
+		lblNewLabel.setBounds(36, 52, 79, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Password:");
+		JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Password"));
 		lblNewLabel_1.setBounds(48, 95, 67, 14);
 		contentPane.add(lblNewLabel_1);
 		
@@ -125,12 +125,18 @@ public class LoginGUI extends JFrame {
 		login.setBounds(150, 164, 89, 23);
 		contentPane.add(login);
 		
-		JLabel lblNewLabel_2 = new JLabel("New Account?");
-		lblNewLabel_2.setBounds(10, 215, 75, 14);
+		JLabel lblNewLabel_2 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("NewAccount"));
+		lblNewLabel_2.setBounds(10, 215, 89, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		JButton register = new JButton("Register");
-		register.setBounds(10, 227, 89, 23);
+		JButton register = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Register"));
+		register.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFrame a = new ErregistratuGUI();
+				a.setVisible(true);
+			}
+		});
+		register.setBounds(10, 227, 105, 23);
 		contentPane.add(register);
 	}
 }

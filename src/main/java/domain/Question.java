@@ -1,6 +1,7 @@
 package domain;
 
 import java.io.*;
+import java.util.HashMap;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,7 +21,7 @@ public class Question implements Serializable {
 	private Integer questionNumber;
 	private String question; 
 	private float betMinimum;
-	private String result;  
+	private String result;
 	@XmlIDREF
 	private Event event;
 
@@ -36,6 +37,7 @@ public class Question implements Serializable {
 		this.event = event;
 	}
 	
+
 	public Question(String query, float betMinimum,  Event event) {
 		super();
 		this.question = query;

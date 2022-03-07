@@ -3,10 +3,14 @@ package gui;
 
 import java.awt.EventQueue;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import domain.Event;
+
 import javax.swing.JButton;
 
 
@@ -26,7 +30,7 @@ public class BetGUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					KuotakGUI frame = new KuotakGUI();
+					KuotakGUI frame = new KuotakGUI(new Vector<Event>());
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

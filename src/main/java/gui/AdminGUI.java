@@ -208,7 +208,7 @@ public class AdminGUI extends JFrame {
 			btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateOdd"));
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JFrame a = new KuotakGUI();
+					JFrame a = new KuotakGUI(new Vector<Event>());
 					a.setVisible(true);
 				}
 			});
