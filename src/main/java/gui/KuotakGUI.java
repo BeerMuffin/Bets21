@@ -44,7 +44,6 @@ public class KuotakGUI extends JFrame {
 	private JScrollPane scrollPaneEvents = new JScrollPane();
 	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
 	private JLabel jLabelMsg = new JLabel();
-	private JLabel jLabelError = new JLabel();
 	
 	private Vector<Date> datesWithEventsCurrentMonth = new Vector<Date>();
 	private final JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Odd"));
@@ -64,10 +63,12 @@ public class KuotakGUI extends JFrame {
 		jComboBoxEvents.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				modelQueries.removeAllElements();
+				if(jComboBoxEvents.isFocusOwner()) {
 				Event ev = (Event) jComboBoxEvents.getSelectedItem();
 				for(Question q: ev.getQuestions()) {
 					modelQueries.addElement(q);
 				}
+			}
 			}
 		});
 
@@ -92,13 +93,8 @@ public class KuotakGUI extends JFrame {
 
 		jLabelMsg.setBounds(new Rectangle(275, 182, 305, 20));
 		jLabelMsg.setForeground(Color.red);
-		// jLabelMsg.setSize(new Dimension(305, 20));
-
-		jLabelError.setBounds(new Rectangle(175, 240, 305, 20));
-		jLabelError.setForeground(Color.red);
 
 		this.getContentPane().add(jLabelMsg, null);
-		this.getContentPane().add(jLabelError, null);
 
 		this.getContentPane().add(jButtonClose, null);
 		this.getContentPane().add(result, null);
@@ -132,7 +128,14 @@ public class KuotakGUI extends JFrame {
 				Question qu = (Question) jComboBoxQueries.getSelectedItem();
 				String emaitza = result.getText();
 				Float kuota = Float.parseFloat(odd.getText());
-				
+				BLFacade facade = MainGUI.getBusinessLogic();
+				if(facade.createResult(qu, emaitza, kuota)) {
+					JOptionPane jop = new JOptionPane();
+					jop.showMessageDialog(btnNewButton, "Kuota ondo gehitu da");
+				}else {
+					JOptionPane jop = new JOptionPane();
+					jop.showMessageDialog(btnNewButton, "Kuota hori existitzen da");
+				}
 			}
 		});
 		btnNewButton.setBounds(405, 297, 89, 23);
@@ -143,7 +146,9 @@ public class KuotakGUI extends JFrame {
 
 		
 		// Code for JCalendar
+		
 		this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {
+			
 			public void propertyChange(PropertyChangeEvent propertychangeevent) {
 //				this.jCalendar.addPropertyChangeListener(new PropertyChangeListener() {
 //					public void propertyChange(PropertyChangeEvent propertychangeevent) {
@@ -199,8 +204,6 @@ public class KuotakGUI extends JFrame {
 						jComboBoxEvents.repaint();
 
 					} catch (Exception e1) {
-
-						jLabelError.setText(e1.getMessage());
 					}
 
 				}
@@ -260,7 +263,6 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWit
 		domain.Event event = ((domain.Event) jComboBoxEvents.getSelectedItem());
 
 		try {
-			jLabelError.setText("");
 			jLabelMsg.setText("");
 
 			// Displays an exception if the query field is empty
@@ -271,10 +273,6 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWit
 				// It could be to trigger an exception if the introduced string is not a number
 				float inputPrice = Float.parseFloat(odd.getText());
 
-				if (inputPrice <= 0)
-					jLabelError.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorNumber"));
-				else {
-
 					// Obtain the business logic from a StartWindow class (local or remote)
 					BLFacade facade = MainGUI.getBusinessLogic();
 
@@ -282,7 +280,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWit
 
 					jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryCreated"));
 				}
-			} else
+			 else
 				jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorQuery"));
 		} catch (EventFinished e1) {
 			jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorEventHasFinished") + ": "
@@ -290,7 +288,6 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector<Date> datesWit
 		} catch (QuestionAlreadyExist e1) {
 			jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
 		} catch (java.lang.NumberFormatException e1) {
-			jLabelError.setText(ResourceBundle.getBundle("Etiquetas").getString("ErrorNumber"));
 		} catch (Exception e1) {
 
 			e1.printStackTrace();

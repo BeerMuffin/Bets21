@@ -2,6 +2,7 @@ package domain;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.Vector;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -24,6 +25,17 @@ public class Question implements Serializable {
 	private String result;
 	@XmlIDREF
 	private Event event;
+	
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+	private Vector<Result> results =new Vector<Result>();
+
+	public Vector<Result> getResults() {
+		return results;
+	}
+
+	public void setResults(Vector<Result> results) {
+		this.results = results;
+	}
 
 	public Question(){
 		super();
@@ -160,8 +172,21 @@ public class Question implements Serializable {
 		return questionNumber+";"+question+";"+Float.toString(betMinimum);
 	}
 
+	public Result addResult(String result, float odd)  {
+		Result re = new Result(result, odd);
+        results.add(re);
+        return re;
+	}
 
-
+	public boolean DoesResultExists(String result)  {	
+		for (Result r: this.getResults()){
+			if (r.getResult().compareTo(result)==0)
+				return true;
+		}
+		return false;
+	}
+		
+	
 
 	
 }

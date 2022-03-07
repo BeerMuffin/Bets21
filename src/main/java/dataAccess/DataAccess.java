@@ -20,6 +20,7 @@ import configuration.UtilDate;
 import domain.Admin;
 import domain.Event;
 import domain.Question;
+import domain.Result;
 import domain.User;
 import exceptions.QuestionAlreadyExist;
 
@@ -181,6 +182,19 @@ public class DataAccess  {
 							// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
 			db.getTransaction().commit();
 			return q;
+		
+	}
+	
+	public boolean createResult(Question question, String result, float odd) {
+		Question qu = db.find(Question.class, question.getQuestionNumber());
+		if(!qu.DoesResultExists(result)) {
+			db.getTransaction().begin();
+			qu.addResult(result, odd);
+			db.persist(qu);
+			db.getTransaction().commit();
+			return true;
+		}else
+			return false;
 		
 	}
 	

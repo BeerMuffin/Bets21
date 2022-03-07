@@ -10,6 +10,7 @@ import javax.jws.WebService;
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.Question;
+import domain.Result;
 import domain.User;
 import domain.Admin;
 import domain.Event;
@@ -80,6 +81,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 		return qry;
    };
+   
+   public boolean createResult(Question question, String result, float odd) {
+	   dbManager.open(false);
+	   boolean r = dbManager.createResult(question, result, odd);
+	   dbManager.close();
+	   return r;
+   }
    
    public boolean registerUser(User u) {
 	   dbManager.open(false);

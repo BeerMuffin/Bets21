@@ -9,6 +9,7 @@ import java.util.Date;
 
 //import domain.Booking;
 import domain.Question;
+import domain.Result;
 import domain.User;
 import domain.Admin;
 import domain.Event;
@@ -67,5 +68,7 @@ public interface BLFacade  {
 	@WebMethod User getUserByUsername(String username);
 	
 	@WebMethod Admin getAdminByUsername(String username);
+	
+	@WebMethod boolean createResult(Question question, String result, float odd);
 	
 }
