@@ -71,4 +71,6 @@ public interface BLFacade  {
 	
 	@WebMethod boolean createResult(Question question, String result, float odd);
 	
+	@WebMethod boolean createEvent(Event e);
+	
 }

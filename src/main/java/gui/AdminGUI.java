@@ -221,7 +221,7 @@ public class AdminGUI extends JFrame {
 			btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateEvent"));
 			btnNewButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JFrame a = new CreateEventGUI();
+					JFrame a = new CreateEventGUI(new Vector<Event>());
 					a.setVisible(true);
 				}
 			});

@@ -105,6 +105,13 @@ public class BLFacadeImplementation  implements BLFacade {
 	   return reg;
    }
    
+   public boolean createEvent(Event e) {
+	   dbManager.open(false);
+	   boolean cr = dbManager.createEvent(e);
+	   dbManager.close();
+	   return cr;
+   }
+   
    public User getUserByUsername(String username) {
 	   dbManager.open(false);
 	   User u = dbManager.getUserByUsername(username);

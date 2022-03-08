@@ -198,6 +198,16 @@ public class DataAccess  {
 		
 	}
 	
+	public boolean createEvent(Event e) {
+		if(db.find(Event.class, e.getEventNumber()) == null) {
+			db.getTransaction().begin();
+			db.persist(e);
+			db.getTransaction().commit();
+			return true;
+		}else
+			return false;
+	}
+	
 	/**
 	 * This method retrieves from the database the events of a given date 
 	 * 
