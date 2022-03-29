@@ -8,6 +8,7 @@ package gui;
 import javax.swing.*;
 
 import domain.Event;
+import domain.User;
 import businessLogic.BLFacade;
 
 import java.awt.Color;
@@ -29,8 +30,9 @@ public class UserGUI extends JFrame {
 
 	private JPanel jContentPane = null;
 	private JButton jButtonCreateQuery = null;
-	private JButton jButtonQueryQueries = null;
-
+	private JButton query = null;
+	String unekoUsername = null;
+	User unekoUser = null;
     private static BLFacade appFacadeInterface;
 	
 	public static BLFacade getBusinessLogic(){
@@ -47,9 +49,11 @@ public class UserGUI extends JFrame {
 	/**
 	 * This is the default constructor
 	 */
-	public UserGUI() {
+	BLFacade facade = MainGUI.getBusinessLogic();
+	public UserGUI(String u) {
 		super();
-		
+		unekoUsername = u;
+		unekoUser = facade.getUserByUsername(unekoUsername);
 		addWindowListener(new WindowAdapter() {
 			
 		});
@@ -84,15 +88,51 @@ public class UserGUI extends JFrame {
 			jContentPane.add(getLblNewLabel());
 			jContentPane.add(getBoton3());
 			
-			JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			btnNewButton.addActionListener(new ActionListener() {
+			JButton bet = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Bet")); //$NON-NLS-1$ //$NON-NLS-2$
+			bet.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JFrame a = new BetGUI();
 					a.setVisible(true);
 				}
 			});
-			btnNewButton.setBounds(0, 151, 479, 62);
-			jContentPane.add(btnNewButton);
+			bet.setBounds(245, 48, 195, 82);
+			jContentPane.add(bet);
+			
+			JButton inputmoney = new JButton();
+			inputmoney.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JFrame a = new SartuDiruaGUI(unekoUsername);
+					a.setVisible(true);
+				}
+			});
+			inputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.inputmoney.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			inputmoney.setBounds(27, 147, 195, 82);
+			jContentPane.add(inputmoney);
+			
+			JButton outputmoney = new JButton();
+			outputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.outputmoney.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			outputmoney.setBounds(245, 147, 195, 82);
+			jContentPane.add(outputmoney);
+			
+			JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			lblNewLabel.setBounds(4, 11, 46, 14);
+			jContentPane.add(lblNewLabel);
+			
+			JLabel money = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.lblNewLabel_1.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			money.setBounds(54, 11, 78, 14);
+			jContentPane.add(money);
+			money.setText(Double.toString(unekoUser.getMoney()));
+			
+			BLFacade blf = MainGUI.getBusinessLogic();
+			JButton button = new JButton("Update");
+			button.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					User u = blf.getUserByUsername(unekoUsername);
+					money.setText(Double.toString(u.getMoney()));
+				}
+			});
+			button.setBounds(367, 7, 89, 23);
+			jContentPane.add(button);
 		}
 		return jContentPane;
 	}
@@ -110,11 +150,11 @@ public class UserGUI extends JFrame {
 	 * @return javax.swing.JButton
 	 */
 	private JButton getBoton3() {
-		if (jButtonQueryQueries == null) {
-			jButtonQueryQueries = new JButton();
-			jButtonQueryQueries.setBounds(0, 61, 479, 62);
-			jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
-			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
+		if (query == null) {
+			query = new JButton();
+			query.setBounds(27, 48, 195, 82);
+			query.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
+			query.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					JFrame a = new FindQuestionsGUI();
 
@@ -122,14 +162,14 @@ public class UserGUI extends JFrame {
 				}
 			});
 		}
-		return jButtonQueryQueries;
+		return query;
 	}
 	
 
 	private JLabel getLblNewLabel() {
 		if (jLabelSelectOption == null) {
 			jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
-			jLabelSelectOption.setBounds(0, 1, 479, 62);
+			jLabelSelectOption.setBounds(4, 1, 475, 62);
 			jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
 			jLabelSelectOption.setForeground(Color.BLACK);
 			jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
@@ -139,7 +179,7 @@ public class UserGUI extends JFrame {
 	
 	private void redibujar() {
 		jLabelSelectOption.setText(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
-		jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
+		query.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 		jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 		Bet.setText(ResourceBundle.getBundle("Etiquetas").getString("Bet"));
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));

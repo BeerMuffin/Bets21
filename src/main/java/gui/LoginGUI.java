@@ -94,7 +94,7 @@ public class LoginGUI extends JFrame {
 					User u = facade.getUserByUsername(erabiltzaile);
 					if(u != null) {
 						if(pasahitz.equals(u.getPassword())){
-							JFrame a = new UserGUI();
+							JFrame a = new UserGUI(u.getUsername());
 							a.setVisible(true);
 						}else {
 							JOptionPane jop = new JOptionPane();

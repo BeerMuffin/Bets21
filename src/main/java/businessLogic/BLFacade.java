@@ -73,4 +73,6 @@ public interface BLFacade  {
 	
 	@WebMethod boolean createEvent(Event e);
 	
+	@WebMethod public void inputMoney(String u, double money);
+	
 }

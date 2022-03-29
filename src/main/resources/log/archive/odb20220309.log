@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-03-09 15:54:00 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 8556@LAPTOP-60C7DE8B
+
+[2022-03-09 15:54:01 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-03-09 15:54:01 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-03-09 15:54:01 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-03-09 15:54:01 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-03-09 15:54:01 #6 type] 
+Type domain.Result is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-03-09 15:56:49 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 96-100)
+
+[2022-03-09 15:56:49 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 10780@LAPTOP-60C7DE8B
+
+[2022-03-09 15:56:49 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-03-09 15:56:49 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-03-09 15:56:49 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-03-09 15:56:49 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-03-09 15:56:49 #7 type] 
+Type domain.Result is not enhanced.
+

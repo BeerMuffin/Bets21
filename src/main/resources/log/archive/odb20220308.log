@@ -241,3 +241,23 @@ Type domain.Admin is not enhanced.
 [2022-03-08 21:43:59 #6 type] 
 Type domain.Result is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-03-08 21:49:32 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 9664@LAPTOP-60C7DE8B
+
+[2022-03-08 21:49:33 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-03-08 21:49:33 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-03-08 21:49:33 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-03-08 21:49:33 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-03-08 21:49:33 #6 type] 
+Type domain.Result is not enhanced.
+

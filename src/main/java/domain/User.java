@@ -12,6 +12,7 @@ public class User {
 	private String email;
 	private String password;
 	private String birthday;
+	private double money;
 	
 	public User(String n, String u, String e, String p, String day, String month, String year) {
 		this.name = n;
@@ -19,6 +20,15 @@ public class User {
 		this.email = e;
 		this.password = p;
 		this.birthday = day+"/"+month+"/"+year;
+		this.money = 0.0;
+	}
+
+	public double getMoney() {
+		return money;
+	}
+
+	public void setMoney(double money) {
+		this.money = money;
 	}
 
 	public String getName() {
@@ -61,4 +71,7 @@ public class User {
 		this.birthday = day+"/"+month+"/"+year;
 	}
 	
+	public void addMoney(double m) {
+		this.money = money + m;
+	}
 }

@@ -317,4 +317,16 @@ public boolean existQuestion(Event event, String question) {
 	public Admin getAdminByUsername(String username) {
 		return db.find(Admin.class, username);
 	}
+	
+	public void inputMoney(String u, double money) {
+		User user= this.getUserByUsername(u);
+		 if (user==null)
+		 System.out.println(u + " it is not in the database");
+		 else {
+		 db.getTransaction().begin();
+		 user.addMoney(money);
+		 db.getTransaction().commit();
+		 System.out.println(user + " has been updated");
+		}
+		}
 }
