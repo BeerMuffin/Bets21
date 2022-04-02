@@ -13,6 +13,7 @@ import domain.Question;
 import domain.Result;
 import domain.User;
 import domain.Admin;
+import domain.Bet;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -89,6 +90,13 @@ public class BLFacadeImplementation  implements BLFacade {
 	   return r;
    }
    
+   public boolean createBet(Bet b) {
+	   dbManager.open(false);
+	   boolean r = dbManager.createBet(b);
+	   dbManager.close();
+	   return r;
+   }
+   
    public boolean registerUser(User u) {
 	   dbManager.open(false);
 	   boolean reg;
@@ -129,6 +137,12 @@ public class BLFacadeImplementation  implements BLFacade {
    public void inputMoney(String u, double money) {
 	   dbManager.open(false);
 	   dbManager.inputMoney(u, money);
+	   dbManager.close();
+   }
+   
+   public void outputMoney(String u, double money) {
+	   dbManager.open(false);
+	   dbManager.outputMoney(u, money);
 	   dbManager.close();
    }
 	
@@ -179,5 +193,11 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 	}
 
+    public Result getResultByResult(String result) {
+    	dbManager.open(false);
+    	Result res = dbManager.getResultByResult(result);
+    	dbManager.close();
+    	return res;
+    }
 }
 

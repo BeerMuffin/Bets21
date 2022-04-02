@@ -12,6 +12,7 @@ import domain.Question;
 import domain.Result;
 import domain.User;
 import domain.Admin;
+import domain.Bet;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
@@ -74,5 +75,11 @@ public interface BLFacade  {
 	@WebMethod boolean createEvent(Event e);
 	
 	@WebMethod public void inputMoney(String u, double money);
+	
+	@WebMethod public void outputMoney(String u, double money);
+	
+	@WebMethod boolean createBet(Bet b);
+	
+	@WebMethod Result getResultByResult(String result);
 	
 }

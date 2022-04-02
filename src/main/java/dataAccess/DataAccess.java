@@ -18,6 +18,7 @@ import javax.persistence.TypedQuery;
 import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.Admin;
+import domain.Bet;
 import domain.Event;
 import domain.Question;
 import domain.Result;
@@ -329,4 +330,30 @@ public boolean existQuestion(Event event, String question) {
 		 System.out.println(user + " has been updated");
 		}
 		}
+	
+	public void outputMoney(String u, double money) {
+		User user= this.getUserByUsername(u);
+		 if (user==null)
+		 System.out.println(u + " it is not in the database");
+		 else {
+		 db.getTransaction().begin();
+		 user.substractMoney(money);
+		 db.getTransaction().commit();
+		 System.out.println(user + " has been updated");
+		}
+	}
+	
+	public boolean createBet(Bet b) {
+		if(db.find(Bet.class, b.getBetNumber()) == null) {
+			db.getTransaction().begin();
+			db.persist(b);
+			db.getTransaction().commit();
+			return true;
+		}else
+			return false;
+	}
+	
+	public Result getResultByResult(String result) {
+		return db.find(Result.class, result);
+	}
 }

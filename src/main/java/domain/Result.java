@@ -29,4 +29,8 @@ public class Result {
 	public void setOdd(Float odd) {
 		this.odd = odd;
 	}
+	
+	public String toString() {
+		return this.result + this.odd;
+	}
 }

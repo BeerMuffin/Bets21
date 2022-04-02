@@ -74,4 +74,8 @@ public class User {
 	public void addMoney(double m) {
 		this.money = money + m;
 	}
+	
+	public void substractMoney(double m) {
+		this.money = money - m;
+	}
 }
