@@ -1,5 +1,6 @@
 package dataAccess;
 
+import java.util.ArrayList;
 //hello
 import java.util.Calendar;
 import java.util.Date;
@@ -355,5 +356,30 @@ public boolean existQuestion(Event event, String question) {
 	
 	public Result getResultByResult(String result) {
 		return db.find(Result.class, result);
+	}
+	
+	public void addOperation(String u, String o) {
+		User user = this.getUserByUsername(u);
+		 if (user==null)
+			 System.out.println(u + " it is not in the database");
+			 else {
+				 db.getTransaction().begin();
+				 user.addOperation(o);
+				 db.getTransaction().commit();
+				 System.out.println(user + " has been updated");
+			}
+	}
+	
+	public ArrayList<String> getOperationsDB(String u){
+		ArrayList<String> ar = new ArrayList<String>();
+		User user = this.getUserByUsername(u);
+		 if (user==null)
+			 System.out.println(u + " it is not in the database");
+			 else {
+				 for(String s: user.getOperations()) {
+					 ar.add(s);
+				 }
+			}
+		 return ar;
 	}
 }

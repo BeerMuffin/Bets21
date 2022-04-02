@@ -1,4 +1,5 @@
 package businessLogic;
+import java.util.ArrayList;
 //hola
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -198,6 +199,19 @@ public class BLFacadeImplementation  implements BLFacade {
     	Result res = dbManager.getResultByResult(result);
     	dbManager.close();
     	return res;
+    }
+    
+    public void addOperation(String u, String o) {
+    	dbManager.open(false);
+    	dbManager.addOperation(u, o);
+    	dbManager.close();
+    }
+    
+    public ArrayList<String> getOperationsDB(String u){
+    	dbManager.open(false);
+    	ArrayList<String> ar = dbManager.getOperationsDB(u);
+    	dbManager.close();
+    	return ar;
     }
 }
 

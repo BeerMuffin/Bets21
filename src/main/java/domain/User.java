@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.ArrayList;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -13,6 +15,7 @@ public class User {
 	private String password;
 	private String birthday;
 	private double money;
+	private ArrayList<String> operations;
 	
 	public User(String n, String u, String e, String p, String day, String month, String year) {
 		this.name = n;
@@ -21,6 +24,15 @@ public class User {
 		this.password = p;
 		this.birthday = day+"/"+month+"/"+year;
 		this.money = 0.0;
+		operations = new ArrayList<String>();
+	}
+
+	public ArrayList<String> getOperations() {
+		return operations;
+	}
+
+	public void setOperations(ArrayList<String> operations) {
+		this.operations = operations;
 	}
 
 	public double getMoney() {
@@ -77,5 +89,9 @@ public class User {
 	
 	public void substractMoney(double m) {
 		this.money = money - m;
+	}
+	
+	public void addOperation(String s) {
+		this.operations.add(s);
 	}
 }

@@ -58,6 +58,8 @@ public class AteraDiruaGUI extends JFrame {
 				double money = Double.parseDouble(ateradirua.getText());
 				BLFacade facade = MainGUI.getBusinessLogic();
 				facade.outputMoney(unekoUsername, money);
+				String s = "Dirua Atera du: " + ateradirua.getText() + "€";
+				facade.addOperation(unekoUsername, s);
 			}
 		});
 		btnNewButton.setBounds(151, 139, 121, 35);

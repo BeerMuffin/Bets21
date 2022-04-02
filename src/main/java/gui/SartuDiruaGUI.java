@@ -58,6 +58,8 @@ public class SartuDiruaGUI extends JFrame {
 				double money = Double.parseDouble(sartudirua.getText());
 				BLFacade facade = MainGUI.getBusinessLogic();
 				facade.inputMoney(unekoUsername, money);
+				String s = "Dirua Sartu du: " + sartudirua.getText() + "€";
+				facade.addOperation(unekoUsername, s);
 			}
 		});
 		btnNewButton.setBounds(151, 139, 121, 35);

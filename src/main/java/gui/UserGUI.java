@@ -95,7 +95,7 @@ public class UserGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			bet.setBounds(245, 48, 195, 82);
+			bet.setBounds(174, 48, 139, 71);
 			jContentPane.add(bet);
 			
 			JButton inputmoney = new JButton();
@@ -106,7 +106,7 @@ public class UserGUI extends JFrame {
 				}
 			});
 			inputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.inputmoney.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			inputmoney.setBounds(27, 147, 195, 82);
+			inputmoney.setBounds(14, 147, 139, 71);
 			jContentPane.add(inputmoney);
 			
 			JButton outputmoney = new JButton();
@@ -117,7 +117,7 @@ public class UserGUI extends JFrame {
 				}
 			});
 			outputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.outputmoney.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			outputmoney.setBounds(245, 147, 195, 82);
+			outputmoney.setBounds(174, 147, 139, 71);
 			jContentPane.add(outputmoney);
 			
 			JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -139,6 +139,16 @@ public class UserGUI extends JFrame {
 			});
 			button.setBounds(367, 7, 89, 23);
 			jContentPane.add(button);
+			
+			JButton operations = new JButton(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			operations.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JFrame a = new OperationsGUI(unekoUsername);
+					a.setVisible(true);
+				}
+			});
+			operations.setBounds(338, 48, 118, 71);
+			jContentPane.add(operations);
 		}
 		return jContentPane;
 	}
@@ -158,7 +168,7 @@ public class UserGUI extends JFrame {
 	private JButton getBoton3() {
 		if (query == null) {
 			query = new JButton();
-			query.setBounds(27, 48, 195, 82);
+			query.setBounds(14, 48, 139, 71);
 			query.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 			query.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {

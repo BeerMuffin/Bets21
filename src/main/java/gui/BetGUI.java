@@ -162,12 +162,19 @@ public class BetGUI extends JFrame {
 				if(u.getMoney() < mb) {
 					JOptionPane jop = new JOptionPane();
 					jop.showMessageDialog(bet, "Ez duzu diru kantitate hori");
-				}else {
+				}
+				else if(mb < qu.getBetMinimum()) {
+					JOptionPane jop = new JOptionPane();
+					jop.showMessageDialog(bet, "Ez duzu diru minimoa apostatu");
+				}
+				else {
 					Bet b = new Bet(betNumber, ev, qu, re, mb);
 					facade.createBet(b);
 					facade.outputMoney(u.getUsername(), mb);
 					JOptionPane jop = new JOptionPane();
 					jop.showMessageDialog(bet, "Apustua gorde da");
+					String s = "Apostatu du: " + ev.getDescription()+" / " + qu.getQuestion()+" / " + re.getResult()+" / "+ Float.toString(mb)+"€";
+					facade.addOperation(u.getUsername(), s);
 				}
 			}
 		});

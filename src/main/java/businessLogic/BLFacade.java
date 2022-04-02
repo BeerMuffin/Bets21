@@ -1,6 +1,7 @@
 package businessLogic;
 
 import java.util.Vector;
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -82,4 +83,7 @@ public interface BLFacade  {
 	
 	@WebMethod Result getResultByResult(String result);
 	
+	@WebMethod void addOperation(String u, String o);
+	
+	@WebMethod ArrayList<String> getOperationsDB(String u);
 }
