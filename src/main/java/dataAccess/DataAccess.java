@@ -21,6 +21,7 @@ import configuration.UtilDate;
 import domain.Admin;
 import domain.Bet;
 import domain.Event;
+import domain.FinalResult;
 import domain.Question;
 import domain.Result;
 import domain.User;
@@ -201,13 +202,10 @@ public class DataAccess  {
 	}
 	
 	public boolean createEvent(Event e) {
-		if(db.find(Event.class, e.getEventNumber()) == null) {
 			db.getTransaction().begin();
 			db.persist(e);
 			db.getTransaction().commit();
 			return true;
-		}else
-			return false;
 	}
 	
 	/**
@@ -381,5 +379,27 @@ public boolean existQuestion(Event event, String question) {
 				 }
 			}
 		 return ar;
+	}
+	
+	public List<Bet> getAllBets() {
+
+		TypedQuery<Bet> query = db.createQuery("SELECT b FROM Bet b",Bet.class);
+		List<Bet> bets = query.getResultList();
+		return  bets;
+		}
+	
+	public void putResults(FinalResult fr) {
+		List<Bet> bets = this.getAllBets();
+		for(Bet b: bets) {
+			if(b.getEvent().getDescription().equals(fr.getEvent().getDescription()) && b.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion()) && b.getResult().getResult().equals(fr.getFinalResult())) {
+				User u = b.getUser();
+				this.inputMoney(u.getUsername(), b.getBetMoney()*b.getResult().getOdd());
+				System.out.println(u.getUsername() + " apustua irabazi du");
+			}
+			else if((b.getEvent().getDescription().equals(fr.getEvent().getDescription())) && (b.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion())) && (b.getResult().getResult().equals(fr.getFinalResult()) == false)) {
+				User u = b.getUser();
+				System.out.println(u.getUsername() + " apustua galdu du");
+			}
+		}
 	}
 }

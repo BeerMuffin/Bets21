@@ -21,7 +21,7 @@ public class Event implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@XmlID
 	@XmlJavaTypeAdapter(IntegerAdapter.class)
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer eventNumber;
 	private String description; 
 	private Date eventDate;
@@ -47,6 +47,7 @@ public class Event implements Serializable {
 	}
 	
 	public Event( String description,Date eventDate) {
+		super();
 		this.description = description;
 		this.eventDate=eventDate;
 	}

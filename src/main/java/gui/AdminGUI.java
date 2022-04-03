@@ -93,6 +93,16 @@ public class AdminGUI extends JFrame {
 			jContentPane.add(getRdbtnNewRadioButton());
 			jContentPane.add(getRdbtnNewRadioButton_2());
 			jContentPane.add(getRdbtnNewRadioButton_1());
+			
+			JButton btnNewButton_2 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AdminGUI.btnNewButton_2.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnNewButton_2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JFrame a = new EmaitzakIpiniGUI(new Vector<Event>());
+					a.setVisible(true);
+				}
+			});
+			btnNewButton_2.setBounds(302, 56, 136, 67);
+			jContentPane.add(btnNewButton_2);
 		}
 		return jContentPane;
 	}
@@ -106,7 +116,7 @@ public class AdminGUI extends JFrame {
 	private JButton getBoton2() {
 		if (jButtonCreateQuery == null) {
 			jButtonCreateQuery = new JButton();
-			jButtonCreateQuery.setBounds(0, 67, 247, 67);
+			jButtonCreateQuery.setBounds(10, 56, 136, 67);
 			jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -126,7 +136,7 @@ public class AdminGUI extends JFrame {
 	private JButton getBoton3() {
 		if (jButtonQueryQueries == null) {
 			jButtonQueryQueries = new JButton();
-			jButtonQueryQueries.setBounds(247, 67, 247, 67);
+			jButtonQueryQueries.setBounds(156, 56, 136, 67);
 			jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -212,7 +222,7 @@ public class AdminGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnNewButton.setBounds(0, 134, 247, 67);
+			btnNewButton.setBounds(10, 134, 136, 67);
 		}
 		return btnNewButton;
 	}
@@ -225,7 +235,7 @@ public class AdminGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnNewButton_1.setBounds(247, 134, 247, 67);
+			btnNewButton_1.setBounds(156, 134, 136, 67);
 		}
 		return btnNewButton_1;
 	}

@@ -168,7 +168,7 @@ public class BetGUI extends JFrame {
 					jop.showMessageDialog(bet, "Ez duzu diru minimoa apostatu");
 				}
 				else {
-					Bet b = new Bet(betNumber, ev, qu, re, mb);
+					Bet b = new Bet(betNumber, ev, qu, re, mb, u);
 					facade.createBet(b);
 					facade.outputMoney(u.getUsername(), mb);
 					JOptionPane jop = new JOptionPane();

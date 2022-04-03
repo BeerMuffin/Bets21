@@ -15,6 +15,7 @@ import domain.User;
 import domain.Admin;
 import domain.Bet;
 import domain.Event;
+import domain.FinalResult;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -86,4 +87,6 @@ public interface BLFacade  {
 	@WebMethod void addOperation(String u, String o);
 	
 	@WebMethod ArrayList<String> getOperationsDB(String u);
+	
+	@WebMethod void putResults(FinalResult fr);
 }

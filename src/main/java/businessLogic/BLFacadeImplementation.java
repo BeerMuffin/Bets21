@@ -16,6 +16,7 @@ import domain.User;
 import domain.Admin;
 import domain.Bet;
 import domain.Event;
+import domain.FinalResult;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -212,6 +213,12 @@ public class BLFacadeImplementation  implements BLFacade {
     	ArrayList<String> ar = dbManager.getOperationsDB(u);
     	dbManager.close();
     	return ar;
+    }
+    
+    public void putResults(FinalResult fr) {
+    	dbManager.open(false);
+    	dbManager.putResults(fr);
+    	dbManager.close();
     }
 }
 

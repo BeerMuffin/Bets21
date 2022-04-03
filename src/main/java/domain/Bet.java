@@ -11,13 +11,22 @@ public class Bet {
 	private Question question;
 	private Result result;
 	private Float betMoney;
-	
-	public Bet(String bn, Event e, Question q, Result r, Float bm) {
+	private User user;
+	public Bet(String bn, Event e, Question q, Result r, Float bm, User u) {
 		this.betNumber = bn;
 		this.event = e;
 		this.question = q;
 		this.result = r;
 		this.betMoney = bm;
+		this.user = u;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public String getBetNumber() {
