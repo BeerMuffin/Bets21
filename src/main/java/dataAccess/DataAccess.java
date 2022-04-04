@@ -395,10 +395,13 @@ public boolean existQuestion(Event event, String question) {
 				User u = b.getUser();
 				this.inputMoney(u.getUsername(), b.getBetMoney()*b.getResult().getOdd());
 				System.out.println(u.getUsername() + " apustua irabazi du");
+				this.addOperation(u.getUsername(), Float.toString(b.getBetMoney()*b.getResult().getOdd())+"€ irabazi ditu apustu batean");
 			}
 			else if((b.getEvent().getDescription().equals(fr.getEvent().getDescription())) && (b.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion())) && (b.getResult().getResult().equals(fr.getFinalResult()) == false)) {
 				User u = b.getUser();
 				System.out.println(u.getUsername() + " apustua galdu du");
+				String s = b.getEvent().getDescription()+" / " + b.getQuestion().getQuestion()+" / " + b.getResult().getResult()+ " apustua galdu du";
+				this.addOperation(u.getUsername(), s);
 			}
 		}
 	}
