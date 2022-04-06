@@ -404,5 +404,8 @@ public boolean existQuestion(Event event, String question) {
 				this.addOperation(u.getUsername(), s);
 			}
 		}
+		db.getTransaction().begin();
+		db.persist(fr);
+		db.getTransaction().commit();
 	}
 }
