@@ -1,11 +1,22 @@
 package domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Result {
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer resultId;
+	public Integer getResultId() {
+		return resultId;
+	}
+
+	public void setResultId(Integer resultId) {
+		this.resultId = resultId;
+	}
+
 	private String result;
 	private Float odd;
 	

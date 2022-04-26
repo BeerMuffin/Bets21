@@ -1,0 +1,52 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-04-11 09:58:50 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 14264@LAPTOP-60C7DE8B
+
+[2022-04-11 09:58:51 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-04-11 09:58:51 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-04-11 09:58:51 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-04-11 09:58:51 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-04-11 09:58:51 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-04-11 09:58:51 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-04-11 09:58:51 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-04-11 10:52:44 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 12504@LAPTOP-60C7DE8B
+
+[2022-04-11 10:52:44 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-04-11 10:52:44 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-04-11 10:52:44 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-04-11 10:52:44 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-04-11 10:52:44 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-04-11 10:52:44 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-04-11 10:52:44 #8 type] 
+Type domain.FinalResult is not enhanced.
+

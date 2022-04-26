@@ -343,13 +343,10 @@ public boolean existQuestion(Event event, String question) {
 	}
 	
 	public boolean createBet(Bet b) {
-		if(db.find(Bet.class, b.getBetNumber()) == null) {
 			db.getTransaction().begin();
 			db.persist(b);
 			db.getTransaction().commit();
 			return true;
-		}else
-			return false;
 	}
 	
 	public Result getResultByResult(String result) {
@@ -395,7 +392,8 @@ public boolean existQuestion(Event event, String question) {
 				User u = b.getUser();
 				this.inputMoney(u.getUsername(), b.getBetMoney()*b.getResult().getOdd());
 				System.out.println(u.getUsername() + " apustua irabazi du");
-				this.addOperation(u.getUsername(), Float.toString(b.getBetMoney()*b.getResult().getOdd())+"€ irabazi ditu apustu batean");
+				String s = Float.toString(b.getBetMoney()*b.getResult().getOdd())+"€ irabazi ditu " + b.getEvent().getDescription()+" / " + b.getQuestion().getQuestion()+" / " + b.getResult().getResult()+ " apustuan";
+				this.addOperation(u.getUsername(), s);
 			}
 			else if((b.getEvent().getDescription().equals(fr.getEvent().getDescription())) && (b.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion())) && (b.getResult().getResult().equals(fr.getFinalResult()) == false)) {
 				User u = b.getUser();

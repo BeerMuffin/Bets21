@@ -32,8 +32,8 @@ public class BetGUI extends JFrame {
 	private JComboBox<Question> jComboBoxQueries = new JComboBox();
 	DefaultComboBoxModel<Question> modelQueries =  new DefaultComboBoxModel<Question>();
 	
-	private JComboBox<String> jComboBoxResults = new JComboBox<String>();
-	DefaultComboBoxModel<String> modelResults = new DefaultComboBoxModel<String>();
+	private JComboBox<Result> jComboBoxResults = new JComboBox<Result>();
+	DefaultComboBoxModel<Result> modelResults = new DefaultComboBoxModel<Result>();
 
 	private JLabel jLabelListOfEvents = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("ListEvents"));
 	private JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("EventDate"));
@@ -85,7 +85,7 @@ public class BetGUI extends JFrame {
 				if(jComboBoxQueries.isFocusOwner()) {
 					Question qu = (Question) jComboBoxQueries.getSelectedItem();
 					for(Result r: qu.getResults()) {
-						modelResults.addElement(r.getResult());
+						modelResults.addElement(r);
 						odd.setText(Float.toString(r.getOdd()));
 						odd.setVisible(true);
 					}
@@ -155,9 +155,8 @@ public class BetGUI extends JFrame {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				Event ev = (Event) jComboBoxEvents.getSelectedItem();
 				Question qu = (Question) jComboBoxQueries.getSelectedItem();
-				Result re =  facade.getResultByResult((String)jComboBoxResults.getSelectedItem());
+				Result re =  (Result)jComboBoxResults.getSelectedItem();
 				Float mb = Float.parseFloat(moneyBet.getText());
-				String betNumber = ev.toString() + qu.toString() + re.toString() + Float.toString(mb) + unekoUsername;
 				User u = facade.getUserByUsername(unekoUsername);
 				if(u.getMoney() < mb) {
 					JOptionPane jop = new JOptionPane();
@@ -168,7 +167,7 @@ public class BetGUI extends JFrame {
 					jop.showMessageDialog(bet, "Ez duzu diru minimoa apostatu");
 				}
 				else {
-					Bet b = new Bet(betNumber, ev, qu, re, mb, u);
+					Bet b = new Bet(ev, qu, re, mb, u);
 					facade.createBet(b);
 					facade.outputMoney(u.getUsername(), mb);
 					JOptionPane jop = new JOptionPane();

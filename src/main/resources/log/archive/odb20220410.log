@@ -1,0 +1,29 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-04-10 23:32:33 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 346-357)
+
+[2022-04-10 23:32:33 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 888@LAPTOP-60C7DE8B
+
+[2022-04-10 23:32:33 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-04-10 23:32:33 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-04-10 23:32:33 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-04-10 23:32:33 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-04-10 23:32:33 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-04-10 23:32:33 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-04-10 23:32:33 #9 type] 
+Type domain.FinalResult is not enhanced.
+

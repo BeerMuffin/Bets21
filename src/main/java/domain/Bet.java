@@ -1,19 +1,20 @@
 package domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 @Entity
 public class Bet {
 
-	@Id
-	private String betNumber;
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer betNumber;
 	private Event event;
 	private Question question;
 	private Result result;
 	private Float betMoney;
 	private User user;
-	public Bet(String bn, Event e, Question q, Result r, Float bm, User u) {
-		this.betNumber = bn;
+	public Bet(Event e, Question q, Result r, Float bm, User u) {
 		this.event = e;
 		this.question = q;
 		this.result = r;
@@ -29,11 +30,11 @@ public class Bet {
 		this.user = user;
 	}
 
-	public String getBetNumber() {
+	public Integer getBetNumber() {
 		return betNumber;
 	}
 
-	public void setBetNumber(String betNumber) {
+	public void setBetNumber(Integer betNumber) {
 		this.betNumber = betNumber;
 	}
 
