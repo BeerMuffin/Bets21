@@ -95,7 +95,7 @@ public class UserGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			bet.setBounds(174, 48, 139, 71);
+			bet.setBounds(165, 48, 161, 71);
 			jContentPane.add(bet);
 			
 			JButton inputmoney = new JButton();
@@ -105,7 +105,7 @@ public class UserGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			inputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.inputmoney.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			inputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("InputMoney")); //$NON-NLS-1$ //$NON-NLS-2$
 			inputmoney.setBounds(14, 147, 139, 71);
 			jContentPane.add(inputmoney);
 			
@@ -116,21 +116,21 @@ public class UserGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			outputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.outputmoney.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			outputmoney.setBounds(174, 147, 139, 71);
+			outputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("OutputMoney")); //$NON-NLS-1$ //$NON-NLS-2$
+			outputmoney.setBounds(165, 147, 161, 71);
 			jContentPane.add(outputmoney);
 			
-			JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Money")); //$NON-NLS-1$ //$NON-NLS-2$
 			lblNewLabel.setBounds(4, 11, 46, 14);
 			jContentPane.add(lblNewLabel);
 			
-			JLabel money = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.lblNewLabel_1.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			JLabel money = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Money")); //$NON-NLS-1$ //$NON-NLS-2$
 			money.setBounds(54, 11, 78, 14);
 			jContentPane.add(money);
 			money.setText(Double.toString(unekoUser.getMoney()));
 			
 			BLFacade blf = MainGUI.getBusinessLogic();
-			JButton button = new JButton("Update");
+			JButton button = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Update"));
 			button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					User u = blf.getUserByUsername(unekoUsername);
@@ -140,15 +140,28 @@ public class UserGUI extends JFrame {
 			button.setBounds(367, 7, 89, 23);
 			jContentPane.add(button);
 			
-			JButton operations = new JButton(ResourceBundle.getBundle("Etiquetas").getString("UserGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			JButton operations = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Operations")); //$NON-NLS-1$ //$NON-NLS-2$
 			operations.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JFrame a = new OperationsGUI(unekoUsername);
 					a.setVisible(true);
 				}
 			});
-			operations.setBounds(338, 48, 118, 71);
+			operations.setBounds(338, 48, 141, 71);
 			jContentPane.add(operations);
+			
+			JButton chat = new JButton();
+			chat.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JFrame a = new ChatGUI(unekoUser);
+
+					a.setVisible(true);
+					
+				}
+			});
+			chat.setText(ResourceBundle.getBundle("Etiquetas").getString("Chat"));
+			chat.setBounds(340, 147, 139, 71);
+			jContentPane.add(chat);
 		}
 		return jContentPane;
 	}

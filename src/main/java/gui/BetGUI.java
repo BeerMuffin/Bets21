@@ -50,7 +50,6 @@ public class BetGUI extends JFrame {
 	private final JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("BetGUI.lblNewLabel_1.text")); //$NON-NLS-1$ //$NON-NLS-2$
 	private JTextField moneyBet;
 	String unekoUsername = null;
-	private final JLabel odd = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("BetGUI.lblNewLabel_2.text")); //$NON-NLS-1$ //$NON-NLS-2$
 	public BetGUI(Vector<domain.Event> v, String username) {
 		unekoUsername = username;
 		try {
@@ -61,7 +60,6 @@ public class BetGUI extends JFrame {
 	}
 
 	private void jbInit(Vector<domain.Event> v) throws Exception {
-		odd.setVisible(false);
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(604, 370));
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
@@ -86,8 +84,6 @@ public class BetGUI extends JFrame {
 					Question qu = (Question) jComboBoxQueries.getSelectedItem();
 					for(Result r: qu.getResults()) {
 						modelResults.addElement(r);
-						odd.setText(Float.toString(r.getOdd()));
-						odd.setVisible(true);
 					}
 				}
 			}
@@ -179,9 +175,6 @@ public class BetGUI extends JFrame {
 		});
 		bet.setBounds(50, 283, 89, 23);
 		getContentPane().add(bet);
-		odd.setBounds(532, 199, 46, 14);
-		
-		getContentPane().add(odd);
 
 		
 		// Code for JCalendar

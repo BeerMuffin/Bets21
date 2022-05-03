@@ -11,6 +11,7 @@ import java.util.Date;
 //import domain.Booking;
 import domain.Question;
 import domain.Result;
+import domain.Txat;
 import domain.User;
 import domain.Admin;
 import domain.Bet;
@@ -89,4 +90,12 @@ public interface BLFacade  {
 	@WebMethod ArrayList<String> getOperationsDB(String u);
 	
 	@WebMethod void putResults(FinalResult fr);
+	
+	@WebMethod void createTxat(Txat t);
+	
+	@WebMethod void addTxat(String u, Txat t);
+	
+	@WebMethod ArrayList<Txat> getTxatsDB(String u);
+	
+	@WebMethod void addMezua(String tm, Txat t);
 }

@@ -1,0 +1,1459 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 10:46:54 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 19236@LAPTOP-60C7DE8B
+
+[2022-05-03 10:46:54 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 10:46:54 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 10:46:54 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 10:46:54 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 10:46:54 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 10:46:54 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 10:46:54 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 10:50:04 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 18036@LAPTOP-60C7DE8B
+
+[2022-05-03 10:50:05 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 10:50:05 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 10:50:05 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 10:50:05 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 10:50:05 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 10:50:05 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 10:50:05 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 11:12:30 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 3708@LAPTOP-60C7DE8B
+
+[2022-05-03 11:12:31 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 11:12:31 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 11:12:31 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 11:12:31 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 11:12:31 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 11:12:31 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 11:12:31 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 11:41:37 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 1568@LAPTOP-60C7DE8B
+
+[2022-05-03 11:41:37 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 11:41:37 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 11:41:37 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 11:41:37 #5 type.registry] 
+New type domain.Txat
+
+[2022-05-03 11:41:37 #6 type.registry] 
+New type java.util.ArrayList<domain.Txat>
+
+[2022-05-03 11:41:37 #7 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 11:41:37 #8 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 11:41:37 #9 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 11:41:37 #10 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 11:41:37 #11 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 11:41:37 #12 type.registry] 
+New type domain.TxatMezua
+
+[2022-05-03 11:41:37 #13 type.registry] 
+New type java.util.Vector<domain.TxatMezua>
+
+[2022-05-03 11:41:37 #14 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 11:43:09 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 590-590)
+
+[2022-05-03 11:43:09 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 6212@LAPTOP-60C7DE8B
+
+[2022-05-03 11:43:09 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 11:43:09 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 11:43:09 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 11:43:09 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 11:43:09 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 11:43:09 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 11:43:09 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 11:43:09 #10 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 11:43:09 #11 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 11:43:48 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 8340@LAPTOP-60C7DE8B
+
+[2022-05-03 11:43:48 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 11:43:48 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 11:43:48 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 11:43:48 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 11:43:48 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 11:43:48 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 11:43:48 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 11:43:48 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 11:43:48 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:00:23 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 14612@LAPTOP-60C7DE8B
+
+[2022-05-03 12:00:23 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:00:23 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:00:23 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:00:23 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:00:23 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:00:23 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:00:23 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:00:23 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:00:23 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:11:29 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 15820@LAPTOP-60C7DE8B
+
+[2022-05-03 12:11:29 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:11:29 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:11:29 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:11:29 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:11:29 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:11:29 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:11:29 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:11:29 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:11:29 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:15:28 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 598-601)
+
+[2022-05-03 12:15:28 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 12976@LAPTOP-60C7DE8B
+
+[2022-05-03 12:15:29 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:15:29 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:15:29 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:15:29 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:15:29 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:15:29 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:15:29 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:15:29 #10 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:15:29 #11 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:20:24 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 6988@LAPTOP-60C7DE8B
+
+[2022-05-03 12:20:24 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:20:24 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:20:24 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:20:24 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:20:24 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:20:24 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:20:24 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:20:24 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:20:24 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:26:29 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 20276@LAPTOP-60C7DE8B
+
+[2022-05-03 12:26:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:26:30 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:26:30 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:26:30 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:26:30 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:26:30 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:26:30 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:26:30 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:26:30 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:32:15 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 602-605)
+
+[2022-05-03 12:32:16 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 3880@LAPTOP-60C7DE8B
+
+[2022-05-03 12:32:16 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:32:16 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:32:16 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:32:16 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:32:16 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:32:16 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:32:16 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:32:16 #10 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:32:16 #11 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:34:22 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 3568@LAPTOP-60C7DE8B
+
+[2022-05-03 12:34:22 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:34:22 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:34:22 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:34:22 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:34:22 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:34:22 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:34:22 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:34:22 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:34:22 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:38:30 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 18144@LAPTOP-60C7DE8B
+
+[2022-05-03 12:38:31 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:38:31 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:38:31 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:38:31 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:38:31 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:38:31 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:38:31 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:38:31 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:38:31 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:44:05 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 11908@LAPTOP-60C7DE8B
+
+[2022-05-03 12:44:05 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:44:05 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:44:05 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:44:05 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:44:05 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:44:05 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:44:05 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:44:05 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:44:05 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:51:38 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 11656@LAPTOP-60C7DE8B
+
+[2022-05-03 12:51:38 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:51:38 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:51:38 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:51:38 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:51:38 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:51:38 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:51:38 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:51:38 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:51:38 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 12:58:14 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 18880@LAPTOP-60C7DE8B
+
+[2022-05-03 12:58:14 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 12:58:14 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 12:58:14 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 12:58:14 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 12:58:14 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 12:58:14 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 12:58:14 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 12:58:14 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 12:58:14 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:05:41 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 13488@LAPTOP-60C7DE8B
+
+[2022-05-03 13:05:41 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:05:41 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:05:41 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:05:41 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:05:41 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:05:41 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:05:41 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:05:41 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:05:41 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:11:18 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 7436@LAPTOP-60C7DE8B
+
+[2022-05-03 13:11:18 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:11:18 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:11:18 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:11:18 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:11:18 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:11:18 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:11:18 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:11:18 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:11:18 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:14:48 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 19412@LAPTOP-60C7DE8B
+
+[2022-05-03 13:14:48 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:14:48 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:14:48 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:14:48 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:14:48 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:14:48 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:14:48 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:14:48 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:14:48 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:18:45 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 15492@LAPTOP-60C7DE8B
+
+[2022-05-03 13:18:45 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:18:45 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:18:45 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:18:45 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:18:45 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:18:45 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:18:45 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:18:45 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:18:45 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:28:31 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 720@LAPTOP-60C7DE8B
+
+[2022-05-03 13:28:32 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:28:32 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:28:32 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:28:32 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:28:32 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:28:32 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:28:32 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:28:32 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:28:32 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:31:01 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 15068@LAPTOP-60C7DE8B
+
+[2022-05-03 13:31:01 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:31:01 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:31:01 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:31:01 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:31:01 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:31:01 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:31:01 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:31:01 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:31:01 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:33:42 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 14948@LAPTOP-60C7DE8B
+
+[2022-05-03 13:33:42 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:33:42 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:33:42 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:33:42 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:33:42 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:33:42 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:33:42 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:33:42 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:33:42 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:36:47 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 606-609)
+
+[2022-05-03 13:36:47 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 12448@LAPTOP-60C7DE8B
+
+[2022-05-03 13:36:48 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:36:48 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:36:48 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:36:48 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:36:48 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:36:48 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:36:48 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:36:48 #10 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:36:48 #11 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:38:03 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 19876@LAPTOP-60C7DE8B
+
+[2022-05-03 13:38:03 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:38:03 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:38:03 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:38:03 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:38:03 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:38:03 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:38:03 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:38:03 #9 type] 
+Type domain.Txat is not enhanced.
+
+[2022-05-03 13:38:03 #10 type] 
+Type domain.TxatMezua is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:49:19 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 9308@LAPTOP-60C7DE8B
+
+[2022-05-03 13:49:19 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:49:19 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:49:19 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:49:19 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:49:19 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:49:19 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:49:19 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:49:19 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:52:34 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 626-628)
+
+[2022-05-03 13:52:34 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 17320@LAPTOP-60C7DE8B
+
+[2022-05-03 13:52:35 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:52:35 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:52:35 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:52:35 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:52:35 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:52:35 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:52:35 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:52:35 #10 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:53:05 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 6784@LAPTOP-60C7DE8B
+
+[2022-05-03 13:53:05 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:53:05 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:53:05 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:53:05 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:53:05 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:53:05 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:53:05 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:53:05 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:54:17 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 629-631)
+
+[2022-05-03 13:54:17 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 17524@LAPTOP-60C7DE8B
+
+[2022-05-03 13:54:17 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:54:17 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:54:17 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:54:17 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:54:17 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:54:17 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:54:17 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:54:17 #10 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:54:34 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 12952@LAPTOP-60C7DE8B
+
+[2022-05-03 13:54:34 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:54:34 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:54:34 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:54:34 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:54:34 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:54:34 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:54:34 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:54:34 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:55:30 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 16208@LAPTOP-60C7DE8B
+
+[2022-05-03 13:55:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:55:30 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:55:30 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:55:30 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:55:30 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:55:30 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:55:30 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:55:30 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:56:40 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 5628@LAPTOP-60C7DE8B
+
+[2022-05-03 13:56:40 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:56:40 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:56:40 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:56:40 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:56:40 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:56:40 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:56:40 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:56:40 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:57:46 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 19768@LAPTOP-60C7DE8B
+
+[2022-05-03 13:57:46 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:57:46 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:57:46 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:57:46 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:57:46 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:57:46 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:57:46 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:57:46 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 13:59:29 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 18080@LAPTOP-60C7DE8B
+
+[2022-05-03 13:59:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 13:59:30 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 13:59:30 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 13:59:30 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 13:59:30 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 13:59:30 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 13:59:30 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 13:59:30 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 14:02:58 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 6284@LAPTOP-60C7DE8B
+
+[2022-05-03 14:02:58 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 14:02:58 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 14:02:58 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 14:02:58 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 14:02:58 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 14:02:58 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 14:02:58 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 14:02:58 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 14:04:06 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 6500@LAPTOP-60C7DE8B
+
+[2022-05-03 14:04:06 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 14:04:06 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 14:04:06 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 14:04:06 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 14:04:06 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 14:04:06 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 14:04:06 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 14:04:06 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 14:05:10 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 7536@LAPTOP-60C7DE8B
+
+[2022-05-03 14:05:10 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 14:05:10 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 14:05:10 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 14:05:10 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 14:05:10 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 14:05:10 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 14:05:10 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 14:05:10 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:04:02 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 4200@LAPTOP-60C7DE8B
+
+[2022-05-03 15:04:02 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:04:02 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:04:02 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:04:02 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:04:02 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:04:02 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:04:02 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:04:02 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:05:57 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 16520@LAPTOP-60C7DE8B
+
+[2022-05-03 15:05:57 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:05:57 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:05:57 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:05:57 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:05:57 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:05:57 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:05:57 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:05:57 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:10:18 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 635-638)
+
+[2022-05-03 15:10:18 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 9288@LAPTOP-60C7DE8B
+
+[2022-05-03 15:10:18 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:10:18 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:10:18 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:10:18 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:10:18 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:10:18 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:10:18 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:10:18 #10 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:13:38 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 18164@LAPTOP-60C7DE8B
+
+[2022-05-03 15:13:38 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:13:38 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:13:38 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:13:38 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:13:38 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:13:38 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:13:38 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:13:38 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:19:57 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' has been recovered (tr. 639-641)
+
+[2022-05-03 15:19:57 #2 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 10004@LAPTOP-60C7DE8B
+
+[2022-05-03 15:19:58 #3 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:19:58 #4 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:19:58 #5 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:19:58 #6 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:19:58 #7 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:19:58 #8 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:19:58 #9 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:19:58 #10 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:23:16 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 7864@LAPTOP-60C7DE8B
+
+[2022-05-03 15:23:16 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:23:16 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:23:16 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:23:16 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:23:16 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:23:16 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:23:16 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:23:16 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:33:27 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 10932@LAPTOP-60C7DE8B
+
+[2022-05-03 15:33:27 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:33:27 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:33:27 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:33:27 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:33:27 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:33:27 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:33:27 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:33:27 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:41:10 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 13188@LAPTOP-60C7DE8B
+
+[2022-05-03 15:41:10 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:41:10 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:41:10 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:41:10 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:41:10 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:41:10 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:41:10 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:41:10 #9 type] 
+Type domain.Txat is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2022-05-03 15:44:02 #1 store] 
+Database 'C:\Users\ibon3\git\Bets21\src\main\resources\bets.temp' is opened by 9056@LAPTOP-60C7DE8B
+
+[2022-05-03 15:44:02 #2 type] 
+Type domain.Question is not enhanced.
+
+[2022-05-03 15:44:02 #3 type] 
+Type domain.Event is not enhanced.
+
+[2022-05-03 15:44:02 #4 type] 
+Type domain.User is not enhanced.
+
+[2022-05-03 15:44:02 #5 type] 
+Type domain.Admin is not enhanced.
+
+[2022-05-03 15:44:02 #6 type] 
+Type domain.Result is not enhanced.
+
+[2022-05-03 15:44:02 #7 type] 
+Type domain.Bet is not enhanced.
+
+[2022-05-03 15:44:02 #8 type] 
+Type domain.FinalResult is not enhanced.
+
+[2022-05-03 15:44:02 #9 type] 
+Type domain.Txat is not enhanced.
+

@@ -12,6 +12,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.Question;
 import domain.Result;
+import domain.Txat;
 import domain.User;
 import domain.Admin;
 import domain.Bet;
@@ -220,5 +221,35 @@ public class BLFacadeImplementation  implements BLFacade {
     	dbManager.putResults(fr);
     	dbManager.close();
     }
+
+	@Override
+	public void createTxat(Txat t) {
+		dbManager.open(false);
+		dbManager.createTxat(t);
+		dbManager.close();
+		
+	}
+
+	@Override
+	public void addTxat(String u, Txat t) {
+		dbManager.open(false);
+		dbManager.addTxat(u, t);
+		dbManager.close();
+	}
+
+	@Override
+	public ArrayList<Txat> getTxatsDB(String u) {
+		dbManager.open(false);
+    	ArrayList<Txat> ar = dbManager.getTxatsDB(u);
+    	dbManager.close();
+    	return ar;
+	}
+	
+	@Override
+	public void addMezua(String tm, Txat txat) {
+		dbManager.open(false);
+		dbManager.addMezua(tm, txat);
+		dbManager.close();
+	}
 }
 

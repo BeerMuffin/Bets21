@@ -16,6 +16,7 @@ public class User {
 	private String birthday;
 	private double money;
 	private ArrayList<String> operations;
+	private ArrayList<Txat> txats;
 	
 	public User(String n, String u, String e, String p, String day, String month, String year) {
 		this.name = n;
@@ -25,6 +26,15 @@ public class User {
 		this.birthday = day+"/"+month+"/"+year;
 		this.money = 0.0;
 		operations = new ArrayList<String>();
+		txats = new ArrayList<Txat>();
+	}
+
+	public ArrayList<Txat> getTxats() {
+		return txats;
+	}
+
+	public void setTxats(ArrayList<Txat> txats) {
+		this.txats = txats;
 	}
 
 	public ArrayList<String> getOperations() {
@@ -93,5 +103,9 @@ public class User {
 	
 	public void addOperation(String s) {
 		this.operations.add(s);
+	}
+	
+	public void addTxat(Txat t) {
+		this.txats.add(t);
 	}
 }

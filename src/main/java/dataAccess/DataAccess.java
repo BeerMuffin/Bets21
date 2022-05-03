@@ -24,6 +24,7 @@ import domain.Event;
 import domain.FinalResult;
 import domain.Question;
 import domain.Result;
+import domain.Txat;
 import domain.User;
 import exceptions.QuestionAlreadyExist;
 
@@ -365,6 +366,31 @@ public boolean existQuestion(Event event, String question) {
 			}
 	}
 	
+	public void addTxat(String u, Txat t) {
+		User user = this.getUserByUsername(u);
+		 if (user==null)
+			 System.out.println(u + " it is not in the database");
+			 else {
+				 db.getTransaction().begin();
+				 user.addTxat(t);
+				 db.getTransaction().commit();
+				 System.out.println(user + " has been updated");
+			 }
+	}
+	
+	public void addMezua(String tm, Txat txat) {
+		db.getTransaction().begin();
+		txat.addMezua(tm);
+		db.getTransaction().commit();
+		 System.out.println(txat.getId() + " has been updated");
+	}
+	
+	public void createTxat(Txat t) {
+		db.getTransaction().begin();
+		db.persist(t);
+		db.getTransaction().commit();
+	}
+	
 	public ArrayList<String> getOperationsDB(String u){
 		ArrayList<String> ar = new ArrayList<String>();
 		User user = this.getUserByUsername(u);
@@ -373,6 +399,19 @@ public boolean existQuestion(Event event, String question) {
 			 else {
 				 for(String s: user.getOperations()) {
 					 ar.add(s);
+				 }
+			}
+		 return ar;
+	}
+	
+	public ArrayList<Txat> getTxatsDB(String u){
+		ArrayList<Txat> ar = new ArrayList<Txat>();
+		User user = this.getUserByUsername(u);
+		 if (user==null)
+			 System.out.println(u + " it is not in the database");
+			 else {
+				 for(Txat t: user.getTxats()) {
+					 ar.add(t);
 				 }
 			}
 		 return ar;
