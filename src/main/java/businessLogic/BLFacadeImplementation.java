@@ -246,6 +246,14 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 	
 	@Override
+	public ArrayList<String> getTxatMezuakDB(Txat t){
+		dbManager.open(false);
+		ArrayList<String> ar = dbManager.getTxatMezuakDB(t);
+		dbManager.close();
+		return ar;
+	}
+	
+	@Override
 	public void addMezua(String tm, Txat txat) {
 		dbManager.open(false);
 		dbManager.addMezua(tm, txat);

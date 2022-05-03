@@ -379,10 +379,13 @@ public boolean existQuestion(Event event, String question) {
 	}
 	
 	public void addMezua(String tm, Txat txat) {
-		db.getTransaction().begin();
-		txat.addMezua(tm);
-		db.getTransaction().commit();
-		 System.out.println(txat.getId() + " has been updated");
+		Txat txatDB = db.find(Txat.class, txat.getId());
+			if(txatDB != null) {
+			db.getTransaction().begin();
+			txat.addMezua(tm);
+			db.getTransaction().commit();
+			 System.out.println(txat.getId() + " has been updated");
+		}
 	}
 	
 	public void createTxat(Txat t) {
@@ -415,6 +418,17 @@ public boolean existQuestion(Event event, String question) {
 				 }
 			}
 		 return ar;
+	}
+	
+	public ArrayList<String> getTxatMezuakDB(Txat t){
+		ArrayList<String> ar = new ArrayList<String>();
+		Txat txat = db.find(Txat.class, t.getId());
+		if(txat != null) {
+				 for(String s: txat.getMezuak()) {
+					 ar.add(s);
+				 }
+		}
+		return ar;
 	}
 	
 	public List<Bet> getAllBets() {

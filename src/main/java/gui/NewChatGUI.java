@@ -74,6 +74,7 @@ public class NewChatGUI extends JFrame {
 				if(hartzaile != null) {
 					Txat txat = new Txat(unekoUser, hartzaile);
 					txat.addMezua(message);
+					System.out.println(txat.getMezuak());
 					facade.createTxat(txat);
 					facade.addTxat(unekoUser.getUsername(), txat);
 					facade.addTxat(hartzaile.getUsername(), txat);

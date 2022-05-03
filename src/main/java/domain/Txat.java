@@ -17,12 +17,13 @@ public class Txat {
 	private Integer id;
 	private User user1;
 	private User user2;
-	private ArrayList<String> mezuak = new ArrayList<String>();
+	private ArrayList<String> mezuak;
 	
 	public Txat(User us1, User us2) {
 		super();
 		this.user1 = us1;
 		this.user2 = us2;
+		 mezuak = new ArrayList<String>();
 	}
 
 	public Integer getId() {

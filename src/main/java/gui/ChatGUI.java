@@ -23,7 +23,7 @@ import javax.swing.JList;
 
 
 public class ChatGUI extends JFrame{
-	private JTextField textField;
+	private JTextField bidali;
 	private User unekoUser;
 	private DefaultComboBoxModel<Txat>  chatModel= new DefaultComboBoxModel<Txat>();
 	private JComboBox<Txat> chat = new JComboBox<Txat>();
@@ -34,14 +34,25 @@ public class ChatGUI extends JFrame{
 	
 	public ChatGUI(User u) {
 		unekoUser = u;
+		BLFacade facade = MainGUI.getBusinessLogic();
 		this.setSize(495, 311);
 		setTitle("Txateatu");
 		getContentPane().setLayout(null);
-		chatScrollPane.setBounds(new Rectangle(10, 30, 87, 207));
+		chatScrollPane.setBounds(new Rectangle(10, 43, 87, 207));
 		getContentPane().add(chatScrollPane);
+		chat.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				chatMezuaModel.removeAllElements();
+				Txat txat = (Txat) chat.getSelectedItem();
+				ArrayList<String> arr = facade.getTxatMezuakDB(txat);
+				for(String s: arr) {
+					chatMezuaModel.addElement(s);
+				}
+			}
+		});
 		chatScrollPane.setViewportView(chat);
 		chat.setModel(chatModel);
-		BLFacade facade = MainGUI.getBusinessLogic();
+		
 		ArrayList<Txat> txats = facade.getTxatsDB(unekoUser.getUsername());
 		for(Txat t: txats) {
 			if(unekoUser.getUsername().equals(t.getUser1().getUsername())) {
@@ -55,14 +66,21 @@ public class ChatGUI extends JFrame{
 			
 		}
 		
-		textField = new JTextField();
-		textField.setBounds(139, 205, 293, 26);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		
+		chatMezuaScrollPane.setBounds(new Rectangle(124, 43, 345, 151));
+		getContentPane().add(chatMezuaScrollPane);
+		chatMezuaScrollPane.setViewportView(chatMezua);
+		chatMezua.setModel(chatMezuaModel);
+		
+		bidali = new JTextField();
+		bidali.setBounds(139, 205, 293, 26);
+		getContentPane().add(bidali);
+		bidali.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Bidali");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		btnNewButton.setBounds(337, 233, 117, 29);
