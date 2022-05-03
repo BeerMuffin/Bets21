@@ -73,14 +73,22 @@ public class ChatGUI extends JFrame{
 		chatMezua.setModel(chatMezuaModel);
 		
 		bidali = new JTextField();
-		bidali.setBounds(139, 205, 293, 26);
+		bidali.setBounds(124, 205, 345, 26);
 		getContentPane().add(bidali);
 		bidali.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Bidali");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				BLFacade facade = MainGUI.getBusinessLogic();
+				String message = bidali.getText();
+				Txat txat = (Txat) chat.getSelectedItem();
+				facade.addMessage(txat, unekoUser.getUsername()+": "+message);
+				chatMezuaModel.removeAllElements();
+				ArrayList<String> arr = facade.getTxatMezuakDB(txat);
+				for(String s: arr) {
+					chatMezuaModel.addElement(s);
+				}
 			}
 		});
 		btnNewButton.setBounds(337, 233, 117, 29);

@@ -366,6 +366,18 @@ public boolean existQuestion(Event event, String question) {
 			}
 	}
 	
+	public void addMessage(Txat t, String message) {
+		Txat txat = db.find(Txat.class, t.getId());
+		if(txat ==null) {
+			 System.out.println(t + " it is not in the database");
+		}else {
+			db.getTransaction().begin();
+			txat.addMezua(message);
+			db.getTransaction().commit();
+			System.out.println(txat + "has been updated");
+		}
+	}
+	
 	public void addTxat(String u, Txat t) {
 		User user = this.getUserByUsername(u);
 		 if (user==null)
@@ -376,16 +388,6 @@ public boolean existQuestion(Event event, String question) {
 				 db.getTransaction().commit();
 				 System.out.println(user + " has been updated");
 			 }
-	}
-	
-	public void addMezua(String tm, Txat txat) {
-		Txat txatDB = db.find(Txat.class, txat.getId());
-			if(txatDB != null) {
-			db.getTransaction().begin();
-			txat.addMezua(tm);
-			db.getTransaction().commit();
-			 System.out.println(txat.getId() + " has been updated");
-		}
 	}
 	
 	public void createTxat(Txat t) {

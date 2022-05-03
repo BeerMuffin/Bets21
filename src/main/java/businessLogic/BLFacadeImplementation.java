@@ -252,12 +252,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		return ar;
 	}
-	
+
 	@Override
-	public void addMezua(String tm, Txat txat) {
+	public void addMessage(Txat t, String message) {
 		dbManager.open(false);
-		dbManager.addMezua(tm, txat);
-		dbManager.close();
+    	dbManager.addMessage(t, message);
+    	dbManager.close();
+		
 	}
 }
 

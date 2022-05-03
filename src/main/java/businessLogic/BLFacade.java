@@ -99,5 +99,5 @@ public interface BLFacade  {
 	
 	@WebMethod ArrayList<String> getTxatMezuakDB(Txat t);
 	
-	@WebMethod void addMezua(String tm, Txat t);
+	@WebMethod void addMessage(Txat t, String message);
 }
