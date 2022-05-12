@@ -42,6 +42,6 @@ public class Result {
 	}
 	
 	public String toString() {
-		return this.result + this.odd;
+		return this.result +"; "+ this.odd;
 	}
 }

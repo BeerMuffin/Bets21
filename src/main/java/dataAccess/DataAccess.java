@@ -443,8 +443,13 @@ public boolean existQuestion(Event event, String question) {
 	public void putResults(FinalResult fr) {
 		List<Bet> bets = this.getAllBets();
 		for(Bet b: bets) {
+			if(!b.isAmaituta()) {
 			if(b.getEvent().getDescription().equals(fr.getEvent().getDescription()) && b.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion()) && b.getResult().getResult().equals(fr.getFinalResult())) {
 				User u = b.getUser();
+				db.getTransaction().begin();
+				b.setAmaituta(true);
+				b.setIrabazita(true);
+				db.getTransaction().commit();
 				this.inputMoney(u.getUsername(), b.getBetMoney()*b.getResult().getOdd());
 				System.out.println(u.getUsername() + " apustua irabazi du");
 				String s = Float.toString(b.getBetMoney()*b.getResult().getOdd())+"€ irabazi ditu " + b.getEvent().getDescription()+" / " + b.getQuestion().getQuestion()+" / " + b.getResult().getResult()+ " apustuan";
@@ -452,9 +457,14 @@ public boolean existQuestion(Event event, String question) {
 			}
 			else if((b.getEvent().getDescription().equals(fr.getEvent().getDescription())) && (b.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion())) && (b.getResult().getResult().equals(fr.getFinalResult()) == false)) {
 				User u = b.getUser();
+				db.getTransaction().begin();
+				b.setAmaituta(true);
+				b.setIrabazita(false);
+				db.getTransaction().commit();
 				System.out.println(u.getUsername() + " apustua galdu du");
 				String s = b.getEvent().getDescription()+" / " + b.getQuestion().getQuestion()+" / " + b.getResult().getResult()+ " apustua galdu du";
 				this.addOperation(u.getUsername(), s);
+			}
 			}
 		}
 		db.getTransaction().begin();

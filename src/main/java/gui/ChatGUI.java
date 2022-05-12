@@ -89,6 +89,7 @@ public class ChatGUI extends JFrame{
 				for(String s: arr) {
 					chatMezuaModel.addElement(s);
 				}
+				bidali.setText("");
 			}
 		});
 		btnNewButton.setBounds(337, 233, 117, 29);

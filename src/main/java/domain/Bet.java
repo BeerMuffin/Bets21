@@ -14,12 +14,33 @@ public class Bet {
 	private Result result;
 	private Float betMoney;
 	private User user;
+	private boolean amaituta;
+	private boolean irabazita;
+	
 	public Bet(Event e, Question q, Result r, Float bm, User u) {
 		this.event = e;
 		this.question = q;
 		this.result = r;
 		this.betMoney = bm;
 		this.user = u;
+		this.amaituta = false;
+		this.irabazita = false;
+	}
+
+	public boolean isAmaituta() {
+		return amaituta;
+	}
+
+	public void setAmaituta(boolean amaituta) {
+		this.amaituta = amaituta;
+	}
+
+	public boolean isIrabazita() {
+		return irabazita;
+	}
+
+	public void setIrabazita(boolean irabazita) {
+		this.irabazita = irabazita;
 	}
 
 	public User getUser() {
