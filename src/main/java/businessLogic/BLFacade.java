@@ -17,6 +17,8 @@ import domain.Admin;
 import domain.Bet;
 import domain.Event;
 import domain.FinalResult;
+import domain.MultipleBet;
+import domain.PartialBet;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -82,6 +84,10 @@ public interface BLFacade  {
 	@WebMethod public void outputMoney(String u, double money);
 	
 	@WebMethod boolean createBet(Bet b);
+	
+	@WebMethod boolean createPartialBet(PartialBet pb);
+	
+	@WebMethod boolean createMultipleBet(MultipleBet mb);
 	
 	@WebMethod Result getResultByResult(String result);
 	

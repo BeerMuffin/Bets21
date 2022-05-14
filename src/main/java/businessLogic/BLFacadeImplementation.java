@@ -18,6 +18,8 @@ import domain.Admin;
 import domain.Bet;
 import domain.Event;
 import domain.FinalResult;
+import domain.MultipleBet;
+import domain.PartialBet;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -259,6 +261,22 @@ public class BLFacadeImplementation  implements BLFacade {
     	dbManager.addMessage(t, message);
     	dbManager.close();
 		
+	}
+
+	@Override
+	public boolean createPartialBet(PartialBet pb) {
+		dbManager.open(false);
+		boolean b = dbManager.createPartialBet(pb);
+		dbManager.close();
+		return b;
+	}
+
+	@Override
+	public boolean createMultipleBet(MultipleBet mb) {
+		dbManager.open(false);
+		boolean b = dbManager.createMultipleBet(mb);
+		dbManager.close();
+		return b;
 	}
 }
 

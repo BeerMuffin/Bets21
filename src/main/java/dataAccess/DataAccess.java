@@ -22,6 +22,8 @@ import domain.Admin;
 import domain.Bet;
 import domain.Event;
 import domain.FinalResult;
+import domain.MultipleBet;
+import domain.PartialBet;
 import domain.Question;
 import domain.Result;
 import domain.Txat;
@@ -350,6 +352,20 @@ public boolean existQuestion(Event event, String question) {
 			return true;
 	}
 	
+	public boolean createPartialBet(PartialBet pb) {
+			db.getTransaction().begin();
+			db.persist(pb);
+			db.getTransaction().commit();
+			return true;
+	}
+	
+	public boolean createMultipleBet(MultipleBet mb) {
+		db.getTransaction().begin();
+		db.persist(mb);
+		db.getTransaction().commit();
+		return true;
+}
+	
 	public Result getResultByResult(String result) {
 		return db.find(Result.class, result);
 	}
@@ -440,6 +456,12 @@ public boolean existQuestion(Event event, String question) {
 		return  bets;
 		}
 	
+	public List<MultipleBet> getAllMultipleBets(){
+		TypedQuery<MultipleBet> query = db.createQuery("SELECT mb FROM MultipleBet mb", MultipleBet.class);
+		List<MultipleBet> mBets = query.getResultList();
+		return mBets;
+	}
+	
 	public void putResults(FinalResult fr) {
 		List<Bet> bets = this.getAllBets();
 		for(Bet b: bets) {
@@ -467,6 +489,41 @@ public boolean existQuestion(Event event, String question) {
 			}
 			}
 		}
+		List<MultipleBet> multipleBets = this.getAllMultipleBets();
+		for(MultipleBet mb: multipleBets) {
+			if(!mb.allAmaitutak()) {
+				for(PartialBet pb: mb.getEzAmaitutak()) {
+					if(pb.getEvent().getDescription().equals(fr.getEvent().getDescription()) && pb.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion()) && pb.getResult().getResult().equals(fr.getFinalResult())){
+						db.getTransaction().begin();
+						pb.setAmaituta(true);
+						pb.setIrabazita(true);
+						db.getTransaction().commit();
+					}
+					else if((pb.getEvent().getDescription().equals(fr.getEvent().getDescription())) && (pb.getQuestion().getQuestion().equals(fr.getQuestion().getQuestion())) && (pb.getResult().getResult().equals(fr.getFinalResult()) == false)) {
+						db.getTransaction().begin();
+						pb.setAmaituta(true);
+						pb.setIrabazita(false);
+						db.getTransaction().commit();
+				}
+			}
+				if(mb.allAmaitutak()) {
+					User u = mb.getUser();
+					db.getTransaction().begin();
+					mb.setAmaituta();
+					db.getTransaction().commit();
+					if(mb.allIrabazitak()) {
+						double kuotaTotala = mb.kuotaTotala();
+						this.inputMoney(u.getUsername(), kuotaTotala*mb.getMultipleBetMoney());
+						String s = Double.toString(kuotaTotala*mb.getMultipleBetMoney()) + "€ irabazi ditu apustu anitz batean";
+						this.addOperation(u.getUsername(), s);
+						mb.setIrabazita();
+					}else {
+						this.addOperation(u.getUsername(), "Apustu Anitza galdu du, "+ Float.toString(mb.getMultipleBetMoney())+"€ galduz");
+						mb.setIrabazita();
+					}
+				}
+		}
+	}
 		db.getTransaction().begin();
 		db.persist(fr);
 		db.getTransaction().commit();

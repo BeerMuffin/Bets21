@@ -91,7 +91,7 @@ public class UserGUI extends JFrame {
 			JButton bet = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Bet")); //$NON-NLS-1$ //$NON-NLS-2$
 			bet.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JFrame a = new BetGUI(new Vector<Event>(), unekoUsername);
+					JFrame a = new BetChoiceGUI(new Vector<Event>(), unekoUsername);
 					a.setVisible(true);
 				}
 			});
