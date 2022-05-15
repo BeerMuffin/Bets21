@@ -106,4 +106,12 @@ public interface BLFacade  {
 	@WebMethod ArrayList<String> getTxatMezuakDB(Txat t);
 	
 	@WebMethod void addMessage(Txat t, String message);
+	
+	@WebMethod void setQueryQuestions(String u, boolean b);
+	
+	@WebMethod void setBet(String u, boolean b);
+	
+	@WebMethod void setChat(String u, boolean b);
+	
+	@WebMethod void setMoveMoney(String u, boolean b);
 }

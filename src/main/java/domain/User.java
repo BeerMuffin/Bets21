@@ -17,6 +17,10 @@ public class User {
 	private double money;
 	private ArrayList<String> operations;
 	private ArrayList<Txat> txats;
+	private boolean toQueryQuestions;
+	private boolean toBet;
+	private boolean toChat;
+	private boolean toMoveMoney;
 	
 	public User(String n, String u, String e, String p, String day, String month, String year) {
 		this.name = n;
@@ -27,6 +31,42 @@ public class User {
 		this.money = 0.0;
 		operations = new ArrayList<String>();
 		txats = new ArrayList<Txat>();
+		this.toQueryQuestions = true;
+		this.toBet = true;
+		this.toChat = true;
+		this.toMoveMoney = true;
+	}
+
+	public boolean isToQueryQuestions() {
+		return toQueryQuestions;
+	}
+
+	public void setToQueryQuestions(boolean toQueryQuestions) {
+		this.toQueryQuestions = toQueryQuestions;
+	}
+
+	public boolean isToBet() {
+		return toBet;
+	}
+
+	public void setToBet(boolean toBet) {
+		this.toBet = toBet;
+	}
+
+	public boolean isToChat() {
+		return toChat;
+	}
+
+	public void setToChat(boolean toChat) {
+		this.toChat = toChat;
+	}
+
+	public boolean isToMoveMoney() {
+		return toMoveMoney;
+	}
+
+	public void setToMoveMoney(boolean toMoveMoney) {
+		this.toMoveMoney = toMoveMoney;
 	}
 
 	public ArrayList<Txat> getTxats() {

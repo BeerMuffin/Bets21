@@ -103,6 +103,16 @@ public class AdminGUI extends JFrame {
 			});
 			btnNewButton_2.setBounds(302, 56, 136, 67);
 			jContentPane.add(btnNewButton_2);
+			
+			JButton btnNewButton_3 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AdminGUI.btnNewButton_3.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnNewButton_3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JFrame a = new PermissionsGUI();
+					a.setVisible(true);
+				}
+			});
+			btnNewButton_3.setBounds(302, 134, 136, 67);
+			jContentPane.add(btnNewButton_3);
 		}
 		return jContentPane;
 	}

@@ -278,5 +278,33 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		return b;
 	}
+
+	@Override
+	public void setQueryQuestions(String u, boolean b) {
+		dbManager.open(false);
+		dbManager.setQueryQuestions(u, b);
+		dbManager.close();
+	}
+
+	@Override
+	public void setBet(String u, boolean b) {
+		dbManager.open(false);
+		dbManager.setBet(u, b);
+		dbManager.close();
+	}
+
+	@Override
+	public void setChat(String u, boolean b) {
+		dbManager.open(false);
+		dbManager.setChat(u, b);
+		dbManager.close();
+	}
+
+	@Override
+	public void setMoveMoney(String u, boolean b) {
+		dbManager.open(false);
+		dbManager.setMoveMoney(u, b);
+		dbManager.close();
+	}
 }
 

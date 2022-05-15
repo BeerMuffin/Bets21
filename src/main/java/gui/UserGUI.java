@@ -91,8 +91,13 @@ public class UserGUI extends JFrame {
 			JButton bet = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Bet")); //$NON-NLS-1$ //$NON-NLS-2$
 			bet.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JFrame a = new BetChoiceGUI(new Vector<Event>(), unekoUsername);
-					a.setVisible(true);
+					if(unekoUser.isToBet()) {
+						JFrame a = new BetChoiceGUI(new Vector<Event>(), unekoUsername);
+						a.setVisible(true);
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(query, "Denied Access");
+					}
 				}
 			});
 			bet.setBounds(165, 48, 161, 71);
@@ -101,8 +106,13 @@ public class UserGUI extends JFrame {
 			JButton inputmoney = new JButton();
 			inputmoney.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					if(unekoUser.isToMoveMoney()) {
 					JFrame a = new SartuDiruaGUI(unekoUsername);
 					a.setVisible(true);
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(query, "Denied Access");
+					}
 				}
 			});
 			inputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("InputMoney")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -112,8 +122,13 @@ public class UserGUI extends JFrame {
 			JButton outputmoney = new JButton();
 			outputmoney.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JFrame a = new AteraDiruaGUI(unekoUsername);
-					a.setVisible(true);
+					if(unekoUser.isToMoveMoney()) {
+						JFrame a = new AteraDiruaGUI(unekoUsername);
+						a.setVisible(true);
+						}else {
+							JOptionPane jop = new JOptionPane();
+							jop.showMessageDialog(query, "Denied Access");
+						}
 				}
 			});
 			outputmoney.setText(ResourceBundle.getBundle("Etiquetas").getString("OutputMoney")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -153,10 +168,13 @@ public class UserGUI extends JFrame {
 			JButton chat = new JButton();
 			chat.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					if(unekoUser.isToChat()) {
 					JFrame a = new ChatGUI(unekoUser);
-
 					a.setVisible(true);
-					
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(query, "Denied Access");
+					}
 				}
 			});
 			chat.setText(ResourceBundle.getBundle("Etiquetas").getString("Chat"));
@@ -185,9 +203,13 @@ public class UserGUI extends JFrame {
 			query.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 			query.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					JFrame a = new FindQuestionsGUI();
-
-					a.setVisible(true);
+					if(unekoUser.isToQueryQuestions()) {
+						JFrame a = new FindQuestionsGUI();
+						a.setVisible(true);
+					}else {
+						JOptionPane jop = new JOptionPane();
+						jop.showMessageDialog(query, "Denied Access");
+					}
 				}
 			});
 		}

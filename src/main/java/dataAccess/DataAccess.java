@@ -528,4 +528,40 @@ public boolean existQuestion(Event event, String question) {
 		db.persist(fr);
 		db.getTransaction().commit();
 	}
+	
+	public void setQueryQuestions(String u, boolean b) {
+		User user = this.getUserByUsername(u);
+		if(user != null) {
+			db.getTransaction().begin();
+			user.setToQueryQuestions(b);
+			db.getTransaction().commit();
+		}
+	}
+	
+	public void setBet(String u, boolean b) {
+		User user = this.getUserByUsername(u);
+		if(user != null) {
+			db.getTransaction().begin();
+			user.setToBet(b);
+			db.getTransaction().commit();
+		}
+	}
+	
+	public void setChat(String u, boolean b) {
+		User user = this.getUserByUsername(u);
+		if(user != null) {
+			db.getTransaction().begin();
+			user.setToChat(b);
+			db.getTransaction().commit();
+		}
+	}
+	
+	public void setMoveMoney(String u, boolean b) {
+		User user = this.getUserByUsername(u);
+		if(user != null) {
+			db.getTransaction().begin();
+			user.setToMoveMoney(b);
+			db.getTransaction().commit();
+		}
+	}
 }
