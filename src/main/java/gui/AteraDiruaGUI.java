@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 
 public class AteraDiruaGUI extends JFrame {
@@ -43,7 +44,7 @@ public class AteraDiruaGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Amount of Money:");
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("AmountMoney"));
 		lblNewLabel.setBounds(10, 66, 118, 14);
 		contentPane.add(lblNewLabel);
 		
@@ -52,7 +53,7 @@ public class AteraDiruaGUI extends JFrame {
 		contentPane.add(ateradirua);
 		ateradirua.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Output");
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Output"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double money = Double.parseDouble(ateradirua.getText());

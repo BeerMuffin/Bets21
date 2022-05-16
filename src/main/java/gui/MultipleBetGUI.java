@@ -49,7 +49,7 @@ public class MultipleBetGUI extends JFrame {
 	private JLabel jLabelMsg = new JLabel();
 	
 	private Vector<Date> datesWithEventsCurrentMonth = new Vector<Date>();
-	private final JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("BetGUI.lblNewLabel_1.text")); //$NON-NLS-1$ //$NON-NLS-2$
+	private final JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MoneyBet")); //$NON-NLS-1$ //$NON-NLS-2$
 	private JTextField moneyBet;
 	String unekoUsername = null;
 	
@@ -142,14 +142,14 @@ public class MultipleBetGUI extends JFrame {
 		jLabelEventDate.setBounds(40, 16, 140, 25);
 		getContentPane().add(jLabelEventDate);
 		
-		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("KuotakGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
-		lblNewLabel.setBounds(275, 80, 46, 14);
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Queries")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabel.setBounds(275, 80, 96, 14);
 		getContentPane().add(lblNewLabel);
 		
 		JLabel results = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Result")); //$NON-NLS-1$ //$NON-NLS-2$
-		results.setBounds(275, 136, 46, 14);
+		results.setBounds(275, 136, 106, 14);
 		getContentPane().add(results);
-		lblNewLabel_1.setBounds(40, 219, 83, 14);
+		lblNewLabel_1.setBounds(40, 219, 131, 14);
 		
 		getContentPane().add(lblNewLabel_1);
 		
@@ -185,11 +185,11 @@ public class MultipleBetGUI extends JFrame {
 		bet.setBounds(40, 271, 131, 35);
 		getContentPane().add(bet);
 		
-		JLabel lblNewLabel_2 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MultipleBetGUI.lblNewLabel_2.text")); //$NON-NLS-1$ //$NON-NLS-2$
-		lblNewLabel_2.setBounds(275, 192, 46, 14);
+		JLabel lblNewLabel_2 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Bets")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabel_2.setBounds(275, 192, 96, 14);
 		getContentPane().add(lblNewLabel_2);
 		
-		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MultipleBetGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Add")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();

@@ -152,7 +152,7 @@ public class UserGUI extends JFrame {
 					money.setText(Double.toString(u.getMoney()));
 				}
 			});
-			button.setBounds(367, 7, 89, 23);
+			button.setBounds(338, 7, 118, 23);
 			jContentPane.add(button);
 			
 			JButton operations = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Operations")); //$NON-NLS-1$ //$NON-NLS-2$

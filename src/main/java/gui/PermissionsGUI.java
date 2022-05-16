@@ -17,6 +17,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -39,44 +40,44 @@ public class PermissionsGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("User:");
-		lblNewLabel.setBounds(10, 31, 69, 14);
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("User")+":");
+		lblNewLabel.setBounds(0, 31, 89, 14);
 		contentPane.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(73, 28, 179, 20);
+		textField.setBounds(101, 28, 179, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		
 		JLabel queryText = new JLabel("");
-		queryText.setBounds(230, 79, 69, 14);
+		queryText.setBounds(230, 79, 94, 14);
 		contentPane.add(queryText);
 		
 		JLabel betText = new JLabel("");
-		betText.setBounds(230, 123, 69, 14);
+		betText.setBounds(230, 123, 94, 14);
 		contentPane.add(betText);
 		
 		JLabel chatText = new JLabel("");
-		chatText.setBounds(230, 164, 69, 14);
+		chatText.setBounds(230, 164, 94, 14);
 		contentPane.add(chatText);
 		
 		JLabel moneyText = new JLabel("");
-		moneyText.setBounds(230, 201, 69, 14);
+		moneyText.setBounds(230, 201, 94, 14);
 		contentPane.add(moneyText);
 		
-		JRadioButton query = new JRadioButton("Query Questions");
+		JRadioButton query = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 		query.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				User u = facade.getUserByUsername(textField.getText());
 				if(query.isSelected()) {
 					facade.setQueryQuestions(u.getUsername(), true);
-					queryText.setText("Permitted");
+					queryText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					queryText.setForeground(Color.green);
 				}else {
 					facade.setQueryQuestions(u.getUsername(), false);
-					queryText.setText("Denied");
+					queryText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					queryText.setForeground(Color.red);
 				}
 			}
@@ -84,18 +85,18 @@ public class PermissionsGUI extends JFrame {
 		query.setBounds(73, 75, 144, 23);
 		contentPane.add(query);
 		
-		JRadioButton bet = new JRadioButton("Bet");
+		JRadioButton bet = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("Bet"));
 		bet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				User u = facade.getUserByUsername(textField.getText());
 				if(bet.isSelected()) {
 					facade.setBet(u.getUsername(), true);
-					betText.setText("Permitted");
+					betText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					betText.setForeground(Color.green);
 				}else {
 					facade.setBet(u.getUsername(), false);
-					betText.setText("Denied");
+					betText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					betText.setForeground(Color.red);
 				}
 			}
@@ -104,18 +105,18 @@ public class PermissionsGUI extends JFrame {
 		contentPane.add(bet);
 		
 
-		JRadioButton chat = new JRadioButton("Chat");
+		JRadioButton chat = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("Chat"));
 		chat.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				User u = facade.getUserByUsername(textField.getText());
 				if(chat.isSelected()) {
 					facade.setChat(u.getUsername(), true);
-					chatText.setText("Permitted");
+					chatText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					chatText.setForeground(Color.green);
 				}else {
 					facade.setChat(u.getUsername(), false);
-					chatText.setText("Denied");
+					chatText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					chatText.setForeground(Color.red);
 				}
 			}
@@ -124,18 +125,18 @@ public class PermissionsGUI extends JFrame {
 		contentPane.add(chat);
 		
 
-		JRadioButton movemoney = new JRadioButton("Move Money");
+		JRadioButton movemoney = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("MoveMoney"));
 		movemoney.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				User u = facade.getUserByUsername(textField.getText());
 				if(movemoney.isSelected()) {
 					facade.setMoveMoney(u.getUsername(), true);
-					moneyText.setText("Permitted");
+					moneyText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					moneyText.setForeground(Color.green);
 				}else {
 					facade.setMoveMoney(u.getUsername(), false);
-					moneyText.setText("Denied");
+					moneyText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					moneyText.setForeground(Color.red);
 				}
 			}
@@ -143,7 +144,7 @@ public class PermissionsGUI extends JFrame {
 		movemoney.setBounds(73, 197, 144, 23);
 		contentPane.add(movemoney);
 	
-		JButton btnNewButton = new JButton("Search");
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Search"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();
@@ -151,38 +152,38 @@ public class PermissionsGUI extends JFrame {
 				if(u != null) {
 				if(u.isToQueryQuestions()) {
 					query.setSelected(true);
-					queryText.setText("Permitted");
+					queryText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					queryText.setForeground(Color.green);
 				}else {
 					query.setSelected(false);
-					queryText.setText("Denied");
+					queryText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					queryText.setForeground(Color.red);
 				}
 				if(u.isToBet()) {
 					bet.setSelected(true);
-					betText.setText("Permitted");
+					betText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					betText.setForeground(Color.green);
 				}else {
 					bet.setSelected(false);
-					betText.setText("Denied");
+					betText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					betText.setForeground(Color.red);
 				}
 				if(u.isToChat()) {
 					chat.setSelected(true);
-					chatText.setText("Permitted");
+					chatText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					chatText.setForeground(Color.green);
 				}else {
 					chat.setSelected(false);
-					chatText.setText("Denied");
+					chatText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					chatText.setForeground(Color.red);
 				}
 				if(u.isToMoveMoney()) {
 					movemoney.setSelected(true);
-					moneyText.setText("Permitted");
+					moneyText.setText(ResourceBundle.getBundle("Etiquetas").getString("Permitted"));
 					moneyText.setForeground(Color.green);
 				}else {
 					movemoney.setSelected(false);
-					moneyText.setText("Denied");
+					moneyText.setText(ResourceBundle.getBundle("Etiquetas").getString("Denied"));
 					moneyText.setForeground(Color.red);
 				}
 				}else {
@@ -191,7 +192,7 @@ public class PermissionsGUI extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(274, 27, 89, 23);
+		btnNewButton.setBounds(290, 27, 89, 23);
 		contentPane.add(btnNewButton);
 	}
 }

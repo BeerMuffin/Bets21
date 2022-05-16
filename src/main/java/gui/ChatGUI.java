@@ -17,6 +17,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import java.awt.ScrollPane;
 import javax.swing.JList;
@@ -77,7 +78,7 @@ public class ChatGUI extends JFrame{
 		getContentPane().add(bidali);
 		bidali.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Bidali");
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Send"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BLFacade facade = MainGUI.getBusinessLogic();
@@ -95,11 +96,11 @@ public class ChatGUI extends JFrame{
 		btnNewButton.setBounds(337, 233, 117, 29);
 		getContentPane().add(btnNewButton);
 		
-		JLabel lblNewLabel = new JLabel("Zure Txatak:");
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("YourChats"));
 		lblNewLabel.setBounds(18, 6, 101, 16);
 		getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton_1 = new JButton("Txat Berria Ireki");
+		JButton btnNewButton_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("NewChat"));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame a = new NewChatGUI(unekoUser);

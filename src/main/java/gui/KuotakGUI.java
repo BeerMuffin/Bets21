@@ -118,8 +118,8 @@ public class KuotakGUI extends JFrame {
 		jLabelEventDate.setBounds(40, 16, 140, 25);
 		getContentPane().add(jLabelEventDate);
 		
-		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("KuotakGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
-		lblNewLabel.setBounds(275, 111, 46, 14);
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Queries")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabel.setBounds(275, 111, 75, 14);
 		getContentPane().add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AddOdd"));
@@ -138,7 +138,7 @@ public class KuotakGUI extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(405, 297, 89, 23);
+		btnNewButton.setBounds(395, 297, 117, 23);
 		getContentPane().add(btnNewButton);
 		lblNewLabel_1.setBounds(330, 256, 46, 14);
 		

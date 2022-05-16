@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.util.ResourceBundle;
 import java.util.Vector;
 
 import javax.swing.JFrame;
@@ -31,7 +32,7 @@ public class BetChoiceGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Single Bet");
+		JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("SingleBet"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame a = new BetGUI(new Vector<Event>(), unekoUsername);
@@ -41,7 +42,7 @@ public class BetChoiceGUI extends JFrame {
 		btnNewButton.setBounds(39, 53, 159, 145);
 		contentPane.add(btnNewButton);
 		
-		JButton btnMultipleBet = new JButton("Multiple Bet");
+		JButton btnMultipleBet = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MultipleBet"));
 		btnMultipleBet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame a = new MultipleBetGUI(new Vector<Event>(), unekoUsername);

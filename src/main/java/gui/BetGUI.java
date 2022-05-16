@@ -47,7 +47,7 @@ public class BetGUI extends JFrame {
 	private JLabel jLabelMsg = new JLabel();
 	
 	private Vector<Date> datesWithEventsCurrentMonth = new Vector<Date>();
-	private final JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("BetGUI.lblNewLabel_1.text")); //$NON-NLS-1$ //$NON-NLS-2$
+	private final JLabel lblNewLabel_1 = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MoneyBet")); //$NON-NLS-1$ //$NON-NLS-2$
 	private JTextField moneyBet;
 	String unekoUsername = null;
 	public BetGUI(Vector<domain.Event> v, String username) {
@@ -129,14 +129,14 @@ public class BetGUI extends JFrame {
 		jLabelEventDate.setBounds(40, 16, 140, 25);
 		getContentPane().add(jLabelEventDate);
 		
-		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("KuotakGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
-		lblNewLabel.setBounds(275, 111, 46, 14);
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Queries")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabel.setBounds(275, 111, 124, 14);
 		getContentPane().add(lblNewLabel);
 		
 		JLabel results = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Result")); //$NON-NLS-1$ //$NON-NLS-2$
-		results.setBounds(275, 167, 46, 14);
+		results.setBounds(275, 167, 64, 14);
 		getContentPane().add(results);
-		lblNewLabel_1.setBounds(43, 222, 83, 14);
+		lblNewLabel_1.setBounds(43, 222, 115, 14);
 		
 		getContentPane().add(lblNewLabel_1);
 		

@@ -42,10 +42,10 @@ public class EmaitzakIpiniGUI extends JFrame {
 
 	private JScrollPane scrollPaneEvents = new JScrollPane();
 	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
-	private JLabel jLabelMsg = new JLabel();
+	private JLabel jLabelMsg = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("FinalResult"));
 	
 	private Vector<Date> datesWithEventsCurrentMonth = new Vector<Date>();
-	private final JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("EmaitzakIpiniGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+	private final JButton btnNewButton = new JButton(ResourceBundle.getBundle("Etiquetas").getString("PutResults")); //$NON-NLS-1$ //$NON-NLS-2$
 	public EmaitzakIpiniGUI(Vector<domain.Event> v) {
 		try {
 			jbInit(v);
@@ -114,8 +114,8 @@ public class EmaitzakIpiniGUI extends JFrame {
 		jLabelEventDate.setBounds(40, 16, 140, 25);
 		getContentPane().add(jLabelEventDate);
 		
-		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("KuotakGUI.lblNewLabel.text")); //$NON-NLS-1$ //$NON-NLS-2$
-		lblNewLabel.setBounds(275, 111, 46, 14);
+		JLabel lblNewLabel = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Queries")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabel.setBounds(275, 111, 80, 14);
 		getContentPane().add(lblNewLabel);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -127,7 +127,7 @@ public class EmaitzakIpiniGUI extends JFrame {
 				facade.putResults(fr);
 			}
 		});
-		btnNewButton.setBounds(275, 242, 130, 27);
+		btnNewButton.setBounds(275, 242, 155, 27);
 		
 		getContentPane().add(btnNewButton);
 
